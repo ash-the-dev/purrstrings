@@ -54,6 +54,9 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  other: {
+    "p:domain_verify": "c61b7e703ea46c9d360c8b70117faee5",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
