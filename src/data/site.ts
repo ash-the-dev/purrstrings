@@ -1,10 +1,40 @@
+function resolveSiteUrl() {
+  const candidates = [
+    process.env.NEXT_PUBLIC_SITE_URL,
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : undefined,
+    process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined,
+    "https://purrstrings.com",
+  ];
+
+  for (const value of candidates) {
+    const trimmed = value?.trim();
+    if (!trimmed) {
+      continue;
+    }
+
+    try {
+      return new URL(trimmed).origin;
+    } catch {
+      try {
+        return new URL(`https://${trimmed}`).origin;
+      } catch {
+        continue;
+      }
+    }
+  }
+
+  return "https://purrstrings.com";
+}
+
 export const siteConfig = {
   name: "Purrstrings",
   tagline: "The Good Stuff for Cats",
   title: "Purrstrings | The Good Stuff for Cats",
   description:
     "Cat product guides, comparisons, reviews, and recommendations for litter, food, furniture, tech, toys, and everything else your cat somehow convinced you to buy.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://purrstrings.com",
+  url: resolveSiteUrl(),
   email: "hello@purrstrings.com",
   locale: "en_US",
   social: {
