@@ -34,17 +34,17 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  // Public PNG icons only — avoid Next auto-generated favicon.ico (Chrome ignores/breaks it).
+  // Versioned PNG icons so Chrome cannot keep a stale globe/ICO cache.
   icons: {
     icon: [
-      { url: "/brand/favicon-32.png", type: "image/png", sizes: "32x32" },
-      { url: "/brand/favicon-16.png", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png", type: "image/png", sizes: "32x32" },
-      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/brand/favicon-32-v3.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/favicon-16-v3.png", type: "image/png", sizes: "16x16" },
+      { url: "/icon-v3.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/icon-192-v3.png", type: "image/png", sizes: "192x192" },
     ],
     apple: [
       {
-        url: "/brand/apple-touch-icon.png",
+        url: "/brand/apple-touch-icon-v3.png",
         sizes: "180x180",
         type: "image/png",
       },

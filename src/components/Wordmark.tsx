@@ -7,6 +7,10 @@ type WordmarkProps = {
   variant?: "wordmark" | "full";
 };
 
+/** Cache-busted brand assets — bump when logo files change. */
+const WORDMARK_SRC = "/brand/purrstrings-wordmark-v3.png";
+const FULL_SRC = "/brand/purrstrings-logo-full-v3.png";
+
 export function Wordmark({
   href = "/",
   className = "",
@@ -17,23 +21,19 @@ export function Wordmark({
   return (
     <Link
       href={href}
-      className={`inline-flex shrink-0 items-center overflow-visible py-1 ${className}`}
+      className={`inline-flex shrink-0 items-center ${className}`}
       aria-label="Purrstrings home"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={
-          isFull
-            ? "/brand/purrstrings-logo-full.png"
-            : "/brand/purrstrings-wordmark.png"
-        }
+        src={isFull ? FULL_SRC : WORDMARK_SRC}
         alt="Purrstrings"
-        width={isFull ? 1600 : 1982}
-        height={isFull ? 560 : 600}
+        width={isFull ? 1059 : 1173}
+        height={isFull ? 446 : 481}
         className={
           isFull
             ? "block h-auto w-[min(100%,18rem)]"
-            : "block h-14 w-auto max-w-[min(72vw,15rem)] object-contain object-left sm:h-16"
+            : "block h-[3.25rem] w-auto sm:h-14"
         }
         decoding="async"
         fetchPriority={isFull ? "auto" : "high"}
