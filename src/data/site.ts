@@ -30,8 +30,8 @@ function resolveSiteUrl() {
 
 export const siteConfig = {
   name: "Purrstrings",
-  tagline: "The Good Stuff for Cats",
-  title: "Purrstrings | The Good Stuff for Cats",
+  tagline: "They pull the strings. We buy the things.",
+  title: "Purrstrings | They pull the strings. We buy the things.",
   description:
     "Cat product guides, comparisons, reviews, and recommendations for litter, food, furniture, tech, toys, and everything else your cat somehow convinced you to buy.",
   url: resolveSiteUrl(),

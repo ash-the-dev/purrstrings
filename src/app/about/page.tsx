@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ContactCtaLink } from "@/components/ContactCtaLink";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 
 export const metadata: Metadata = {
@@ -63,12 +64,13 @@ export default function AboutPage() {
           >
             Read the guides
           </Link>
-          <Link
+          <ContactCtaLink
             href="/contact"
+            source="about_get_in_touch"
             className="inline-flex h-12 items-center justify-center text-sm font-bold underline decoration-baby-pink decoration-2 underline-offset-4"
           >
             Get in touch
-          </Link>
+          </ContactCtaLink>
         </div>
       </article>
       <NewsletterSignup />

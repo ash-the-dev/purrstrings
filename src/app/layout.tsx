@@ -71,6 +71,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Script id="impact-affiliate" strategy="afterInteractive">
           {`(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A6721106-4223-4aec-96eb-15397ea868dd1.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');`}
         </Script>
+        <Script
+          id="commit-happens-wip-tracker"
+          src="https://www.commithappens.com/tracker/wip.js"
+          strategy="afterInteractive"
+          data-site-key="98081f36-6f5b-4df8-ba77-0024cd4b7eed"
+          async
+        />
         <JsonLd />
         <Header />
         <main id="main-content" className="flex-1">

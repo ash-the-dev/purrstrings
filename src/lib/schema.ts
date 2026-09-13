@@ -25,7 +25,7 @@ export function organizationJsonLd() {
     url: siteConfig.url,
     description: siteConfig.description,
     email: siteConfig.email,
-    logo: `${siteConfig.url}/icon`,
+    logo: `${siteConfig.url}/brand/purrstrings-mark.png`,
     sameAs: [
       siteConfig.social.pinterest,
       siteConfig.social.instagram,

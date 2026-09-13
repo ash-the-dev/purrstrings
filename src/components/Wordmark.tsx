@@ -1,32 +1,42 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type WordmarkProps = {
   href?: string;
   className?: string;
+  /** Header uses compact wordmark; footer can show full logo with tagline. */
+  variant?: "wordmark" | "full";
 };
 
-export function Wordmark({ href = "/", className = "" }: WordmarkProps) {
+export function Wordmark({
+  href = "/",
+  className = "",
+  variant = "wordmark",
+}: WordmarkProps) {
+  const isFull = variant === "full";
+
   return (
     <Link
       href={href}
-      className={`relative inline-flex items-end font-serif text-[2.05rem] leading-tight tracking-tight text-foreground sm:text-[2.25rem] ${className}`}
+      className={`relative inline-flex items-center ${className}`}
       aria-label="Purrstrings home"
     >
-      <span className="italic font-medium">Purr</span>
-      <span className="font-medium">strings</span>
-      <svg
-        viewBox="0 0 28 14"
-        className="mb-0.5 ml-0.5 h-3 w-6 text-baby-pink"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M1 4c4 8 8-6 13 2s8-7 13 3"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-        />
-      </svg>
+      <Image
+        src={
+          isFull
+            ? "/brand/purrstrings-logo-full.png"
+            : "/brand/purrstrings-wordmark.png"
+        }
+        alt="Purrstrings"
+        width={isFull ? 280 : 200}
+        height={isFull ? 85 : 36}
+        className={
+          isFull
+            ? "h-auto w-[min(100%,17.5rem)]"
+            : "h-9 w-auto sm:h-10"
+        }
+        priority={!isFull}
+      />
     </Link>
   );
 }

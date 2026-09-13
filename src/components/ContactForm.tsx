@@ -1,12 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { trackContactClick } from "@/lib/wip-track";
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    trackContactClick("contact_form_submit");
     setSubmitted(true);
   }
 

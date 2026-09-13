@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactEmailLink } from "@/components/ContactEmailLink";
 import { ContactForm } from "@/components/ContactForm";
 import { siteConfig } from "@/data/site";
 
@@ -20,9 +21,12 @@ export default function ContactPage() {
       <p className="mt-5 text-base leading-relaxed text-muted">
         Partnerships, corrections, press, or a product you think we should look
         at. This form is front-end only for now. Until it is wired up, email{" "}
-        <a className="underline decoration-border underline-offset-2 hover:text-foreground" href={`mailto:${siteConfig.email}`}>
+        <ContactEmailLink
+          email={siteConfig.email}
+          className="underline decoration-border underline-offset-2 hover:text-foreground"
+        >
           {siteConfig.email}
-        </a>
+        </ContactEmailLink>
         .
       </p>
       <ContactForm />

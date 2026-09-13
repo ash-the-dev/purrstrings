@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="border-t border-black/10 bg-background">
       <div className="mx-auto grid w-full max-w-6xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr] lg:px-8">
         <div>
-          <Wordmark />
+          <Wordmark variant="full" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
             {siteConfig.name} is an editorial guide to cat products, gear, and
             the decisions that somehow require a spreadsheet. We recommend
