@@ -46,7 +46,7 @@ export function ProductPickCard({ pick }: ProductPickCardProps) {
         ) : null}
         <MerchantLinks offers={pick.merchants} />
         <Link href={pick.href} className="mt-5 inline-flex min-h-11 items-center text-sm font-bold">
-          {pick.href.startsWith("/picks/") ? "See the pick" : "See Our Pick"}{" "}
+          {pick.href.startsWith("/picks/") ? "Why we like it" : "Read the guide"}{" "}
           <span aria-hidden="true">→</span>
         </Link>
       </div>

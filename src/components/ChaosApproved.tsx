@@ -12,7 +12,7 @@ export function ChaosApproved() {
 
   return (
     <section className="bg-background">
-      <div className="mx-auto grid w-full max-w-6xl items-end gap-10 px-5 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-28">
+      <div className="mx-auto grid w-full max-w-6xl items-end gap-10 px-5 py-16 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:py-20">
         <div className="relative aspect-[4/5] overflow-hidden bg-black/5">
           {may.image ? (
             <Image
@@ -32,14 +32,14 @@ export function ChaosApproved() {
             May Mayhem vs. Whatever This Thing Is.
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
-            Recurring cats. Future columns. Labels attach later — never as fake
-            testing claims.
+            The cats who stress-test the living room — and the products that
+            survive them. Personality first. Purchase second.
           </p>
           <Link
-            href="/about"
+            href="/best-products"
             className="mt-6 inline-flex text-sm font-bold underline decoration-baby-pink decoration-2 underline-offset-4"
           >
-            Why these cats exist →
+            See what survives →
           </Link>
           {mittens ? (
             <p className="mt-10 text-sm text-muted">

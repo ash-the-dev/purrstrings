@@ -17,7 +17,7 @@ export function Wordmark({
   return (
     <Link
       href={href}
-      className={`inline-flex shrink-0 items-center overflow-visible ${className}`}
+      className={`inline-flex shrink-0 items-center overflow-visible py-1 ${className}`}
       aria-label="Purrstrings home"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -28,12 +28,12 @@ export function Wordmark({
             : "/brand/purrstrings-wordmark.png"
         }
         alt="Purrstrings"
-        width={isFull ? 1600 : 1944}
-        height={isFull ? 560 : 625}
+        width={isFull ? 1600 : 1982}
+        height={isFull ? 560 : 600}
         className={
           isFull
             ? "block h-auto w-[min(100%,18rem)]"
-            : "block h-[3.75rem] w-auto max-w-[min(100%,14rem)] object-contain object-left sm:h-16"
+            : "block h-14 w-auto max-w-[min(72vw,15rem)] object-contain object-left sm:h-16"
         }
         decoding="async"
         fetchPriority={isFull ? "auto" : "high"}

@@ -22,8 +22,8 @@ export function NewsletterSignup() {
             Your cat doesn’t need another newsletter. You might.
           </h2>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
-            Occasional product finds, useful guides, ridiculous cat things, and
-            zero daily inbox harassment.
+            New favorites worth buying, guides when you’re mid-decision, and the
+            occasional ridiculous cat thing — without daily inbox harassment.
           </p>
         </div>
 

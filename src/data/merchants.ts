@@ -17,7 +17,7 @@ export type Merchant = {
 };
 
 export const merchants: Merchant[] = [
-  { id: "amazon", name: "Amazon", cta: "Buy at Amazon" },
+  { id: "amazon", name: "Amazon", cta: "See Current Price" },
   { id: "chewy", name: "Chewy", cta: "Buy at Chewy" },
   { id: "petco", name: "Petco", cta: "Buy at Petco" },
   { id: "petsmart", name: "PetSmart", cta: "Buy at PetSmart" },

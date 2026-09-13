@@ -21,7 +21,7 @@ export function TreatsSpotlight() {
               href="/picks/delectables-squeeze-up"
               className="inline-flex min-h-12 items-center justify-center bg-foreground px-6 text-sm font-bold tracking-wide text-background"
             >
-              See the pick
+              Why we like it
             </Link>
             <Link
               href="/cat-food"

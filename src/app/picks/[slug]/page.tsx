@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
+import { ArticleCard } from "@/components/ArticleCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { MerchantLinks } from "@/components/MerchantLinks";
 import { PersonalityBadge } from "@/components/PersonalityBadge";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductPickCard } from "@/components/ProductPickCard";
+import { articles } from "@/data/articles";
 import { featuredPicks, getPickBySlug } from "@/data/featured-picks";
 
 type PickPageProps = {
@@ -59,6 +61,12 @@ export default async function PickPage({ params }: PickPageProps) {
   const more = featuredPicks
     .filter((item) => item.slug !== pick.slug && item.merchants.some((o) => o.url))
     .slice(0, 2);
+  const relatedGuides = articles
+    .filter(
+      (article) =>
+        !article.draft && article.relatedProductSlugs?.includes(pick.slug),
+    )
+    .slice(0, 3);
 
   return (
     <article className="pb-16 lg:pb-20">
@@ -88,6 +96,9 @@ export default async function PickPage({ params }: PickPageProps) {
           <h1 className="mt-3 font-serif text-4xl leading-tight text-balance sm:text-5xl">
             {pick.headline}
           </h1>
+          <p className="mt-3 text-sm font-medium text-foreground/80">
+            Personally used and recommended.
+          </p>
           {price ? (
             <p className="mt-4 text-lg font-semibold tracking-wide">{price}</p>
           ) : null}
@@ -95,9 +106,30 @@ export default async function PickPage({ params }: PickPageProps) {
             {pick.summary}
           </p>
           <MerchantLinks offers={pick.merchants} />
+          <p className="mt-6 text-sm text-muted">
+            Want the fuller decision path?{" "}
+            <Link href="/guides" className="font-semibold text-foreground underline underline-offset-4">
+              Browse guides
+            </Link>
+            {" · "}
+            <Link href={pick.categoryHref} className="font-semibold text-foreground underline underline-offset-4">
+              More in {pick.category}
+            </Link>
+          </p>
           <AffiliateDisclosure className="mt-8" />
         </div>
       </div>
+
+      {relatedGuides.length > 0 ? (
+        <section className="mx-auto w-full max-w-6xl px-5 pb-10 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-3xl">Related guides</h2>
+          <div className="mt-8 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedGuides.map((article) => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {more.length > 0 ? (
         <section className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">

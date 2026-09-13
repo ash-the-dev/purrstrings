@@ -67,8 +67,8 @@ export function SearchButton() {
               </button>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-muted">
-              Search is a placeholder for now. Browse the categories, or start
-              with the guides while we wire this up.
+              Browse by category, shop the favorites, or start with a guide —
+              search is coming.
             </p>
           </div>
         </div>

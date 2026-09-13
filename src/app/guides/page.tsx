@@ -21,9 +21,9 @@ export default function GuidesPage() {
             Useful cat stuff, minus the fluff
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            Comparisons, buying questions, and the pieces we will keep adding.
-            Drafts are visible here and stay out of the sitemap until they are
-            real.
+            Buying guides and comparisons that answer the question, name the
+            tradeoffs, and point you toward products we actually use — when a
+            purchase is the point.
           </p>
         </div>
       </section>

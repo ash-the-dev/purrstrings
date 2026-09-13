@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { GuideBody } from "@/components/GuideBody";
 import { JsonLd } from "@/components/JsonLd";
 import { PersonalityBadge } from "@/components/PersonalityBadge";
 import { ProductPickCard } from "@/components/ProductPickCard";
@@ -128,19 +129,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
             className="object-cover"
           />
         </div>
-        <p className="mt-3 text-xs text-muted">Placeholder image. Replace before publishing.</p>
 
-        <div className="mt-10 space-y-5 text-base leading-relaxed text-muted">
-          <p className="border-l-2 border-baby-pink pl-4 text-sm text-foreground">
-            Placeholder article body. The fields above are structured and ready.
-            Swap this copy when the real guide is ready. This URL stays noindex
-            while it is a draft.
-          </p>
-          <p>
-            The published version should answer the headline, name the
-            tradeoffs, and link out only when a product or retailer is worth
-            the click.
-          </p>
+        <div className="mt-10">
+          <GuideBody slug={article.slug} />
         </div>
 
         {article.faqs?.length ? (

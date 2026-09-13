@@ -8,67 +8,80 @@ import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ProductPickCard } from "@/components/ProductPickCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TreatsSpotlight } from "@/components/TreatsSpotlight";
-import { getFeaturedArticles } from "@/data/articles";
-import { categories, homepageCategories } from "@/data/categories";
+import { getFeaturedArticles, getPublishedArticles } from "@/data/articles";
+import { homepageCategories } from "@/data/categories";
 import { getLivePicks } from "@/data/featured-picks";
+import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: { absolute: "Purrstrings | Nine lives. Zero jobs." },
-  description:
-    "Purrstrings finds the good stuff for cats — guides, comparisons, and recommendations for litter, food, furniture, tech, toys, and the rest of the household they already run.",
+  title: { absolute: siteConfig.title },
+  description: siteConfig.description,
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Purrstrings | Nine lives. Zero jobs.",
-    description:
-      "Purrstrings finds the good stuff for cats — guides, comparisons, and recommendations for litter, food, furniture, tech, toys, and the rest of the household they already run.",
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
   twitter: {
-    title: "Purrstrings | Nine lives. Zero jobs.",
-    description:
-      "Purrstrings finds the good stuff for cats — guides, comparisons, and recommendations for litter, food, furniture, tech, toys, and the rest of the household they already run.",
+    title: siteConfig.title,
+    description: siteConfig.description,
   },
 };
 
 export default function HomePage() {
-  const featuredArticles = getFeaturedArticles();
-  const trendingLead = featuredArticles[0];
-  const trendingRest = featuredArticles.slice(1, 4);
-  const latest = featuredArticles.slice(0, 6);
-  const discovery = [
-    ...categories.filter((category) => category.indexable && category.slug !== "guides"),
-    ...homepageCategories.filter((category) => !category.indexable),
-  ];
+  const livePicks = getLivePicks();
+  const homepagePicks = livePicks.slice(0, 6);
+  const featuredGuides = getFeaturedArticles()
+    .filter((article) => !article.draft)
+    .slice(0, 4);
+  const guideLead = featuredGuides[0];
+  const guideRest = featuredGuides.slice(1, 4);
+  const moreGuides = getPublishedArticles().slice(0, 3);
 
   return (
     <>
       <Hero />
 
-      <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <SectionHeading
-          eyebrow="Trending with cats"
-          title="The front of the magazine"
-          description="Guides, comparisons, and the questions people actually type at 11pm."
-        />
-        <div className="mt-14 grid gap-14 lg:grid-cols-12 lg:gap-16">
-          {trendingLead ? (
-            <div className="lg:col-span-7">
-              <ArticleCard article={trendingLead} featured />
-            </div>
-          ) : null}
-          <div className="grid gap-12 lg:col-span-5">
-            {trendingRest.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
+      <section className="border-y border-black/10 bg-background">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-8 sm:flex-row sm:items-end sm:justify-between sm:px-6 lg:px-8">
+          <p className="max-w-2xl font-serif text-2xl leading-snug text-foreground sm:text-3xl">
+            Stuff we actually use. Stuff we&apos;d actually buy again.
+          </p>
+          <p className="max-w-md text-sm leading-relaxed text-muted">
+            Every product listed on Purrstrings is something I&apos;ve used and
+            liked — not a spreadsheet of affiliate leftovers.
+          </p>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionHeading
-          eyebrow="Shop by obsession"
-          title="Pick a problem. We will meet you there."
+          eyebrow="What we actually use"
+          title="Shop the favorites"
+          description="Clear picks with why they made the cut — and a straight path to current pricing."
         />
-        <ul className="mt-12 columns-1 gap-x-16 sm:columns-2">
+        <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {homepagePicks.map((pick) => (
+            <ProductPickCard key={pick.slug} pick={pick} />
+          ))}
+        </div>
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <AffiliateDisclosure className="max-w-2xl" />
+          <Link
+            href="/best-products"
+            className="inline-flex min-h-11 shrink-0 items-center text-sm font-bold underline decoration-baby-pink decoration-2 underline-offset-4"
+          >
+            See all favorites →
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <SectionHeading
+          eyebrow="Shop by problem"
+          title="Pick a lane. We’ll meet you there."
+          description="Toys, litter, food, furniture, tech — pathways that end in products, not dead ends."
+        />
+        <ul className="mt-10 columns-1 gap-x-16 sm:columns-2">
           {homepageCategories.map((category) => (
             <li key={category.slug} className="border-b border-black/10 py-4">
               <Link
@@ -76,85 +89,57 @@ export default function HomePage() {
                 className="flex items-baseline justify-between gap-4 font-serif text-2xl hover:text-foreground/60"
               >
                 <span>{category.title}</span>
-                <span aria-hidden="true" className="text-base">→</span>
+                <span aria-hidden="true" className="text-base">
+                  →
+                </span>
               </Link>
             </li>
           ))}
         </ul>
+      </section>
+
+      <TreatsSpotlight />
+
+      <section className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <SectionHeading
+          eyebrow="Guides worth reading"
+          title="Know what you’re buying"
+          description="Comparisons and buying guides that answer the question, then point you at the pick."
+        />
+        <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-14">
+          {guideLead ? (
+            <div className="lg:col-span-7">
+              <ArticleCard article={guideLead} featured />
+            </div>
+          ) : null}
+          <div className="grid gap-10 lg:col-span-5">
+            {guideRest.map((article) => (
+              <ArticleCard key={article.slug} article={article} />
+            ))}
+          </div>
+        </div>
+        <div className="mt-8">
+          <Link
+            href="/guides"
+            className="inline-flex min-h-11 items-center text-sm font-bold underline decoration-baby-blue decoration-2 underline-offset-4"
+          >
+            Browse all guides →
+          </Link>
+        </div>
       </section>
 
       <ChaosApproved />
 
-      <TreatsSpotlight />
-
-      <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <SectionHeading
-          eyebrow="Recommendations"
-          title="Stuff We’d Actually Buy"
-          description="Live affiliate picks with real links. Official product shots first, house photos last. No fake scores."
-        />
-        <div className="mt-14 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {getLivePicks().map((pick) => (
-            <ProductPickCard key={pick.slug} pick={pick} />
-          ))}
-        </div>
-        <AffiliateDisclosure className="mt-10 max-w-3xl" />
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <SectionHeading
-          eyebrow="The desk"
-          title="Latest from Purrstrings"
-        />
-        <div className="mt-14 grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          {latest.map((article) => (
-            <ArticleCard key={article.slug} article={article} quiet />
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
-        <h2 className="max-w-3xl font-serif text-3xl leading-tight sm:text-5xl">
-          What Purrstrings covers
-          <span className="mt-3 block h-[3px] w-16 bg-baby-blue" />
-        </h2>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted">
-          Cat products, gear, food, litter, furniture, tech, gifts, and the
-          guides that should have existed before you opened 37 tabs. Start
-          with a desk. Skip the ones still waiting on a real story.
-        </p>
-        <ul className="mt-12 max-w-xl">
-          {discovery.map((category) => (
-            <li key={category.slug} className="border-b border-black/10">
-              <Link
-                href={category.href}
-                className="flex items-baseline justify-between gap-4 py-4 font-serif text-2xl hover:text-foreground/60"
-              >
-                <span>{category.title}</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-            </li>
-          ))}
-          <li className="border-b border-black/10">
-            <Link
-              href="/guides"
-              className="flex items-baseline justify-between gap-4 py-4 font-serif text-2xl hover:text-foreground/60"
-            >
-              <span>Guides</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-          </li>
-          <li className="border-b border-black/10">
-            <Link
-              href="/about"
-              className="flex items-baseline justify-between gap-4 py-4 font-serif text-2xl hover:text-foreground/60"
-            >
-              <span>Why this exists</span>
-              <span aria-hidden="true">→</span>
-            </Link>
-          </li>
-        </ul>
-      </section>
+      {moreGuides.length > 0 ? (
+        <section className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <SectionHeading eyebrow="Keep going" title="More from the desk" />
+          <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {moreGuides.map((article) => (
+              <ArticleCard key={article.slug} article={article} quiet />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <NewsletterSignup />
     </>

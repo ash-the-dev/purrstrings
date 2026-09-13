@@ -37,15 +37,9 @@ export function CategoryLanding({ category }: CategoryLandingProps) {
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-10 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:px-8 lg:py-14">
           <div>
             <Breadcrumbs items={crumbs} />
-            {!category.indexable ? (
-              <p className="mt-4 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-chaos">
-                Layout ready · not indexed yet
-              </p>
-            ) : (
-              <p className="mt-4 text-[0.7rem] font-bold uppercase tracking-[0.16em]">
-                Category
-              </p>
-            )}
+            <p className="mt-4 text-[0.7rem] font-bold uppercase tracking-[0.16em]">
+              Shop
+            </p>
             <h1 className="mt-3 font-serif text-4xl leading-tight text-balance text-foreground sm:text-6xl">
               {category.title}
             </h1>
@@ -69,7 +63,7 @@ export function CategoryLanding({ category }: CategoryLandingProps) {
 
       {relatedPicks.length > 0 ? (
         <section className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
-          <SectionHeading title="Starting points" description="Guides tied to the questions people actually ask before they click buy." />
+          <SectionHeading title="Favorites in this category" description="Products we actually use — and the why behind them." />
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {relatedPicks.map((pick) => (
               <ProductPickCard key={pick.slug} pick={pick} />
@@ -80,11 +74,11 @@ export function CategoryLanding({ category }: CategoryLandingProps) {
 
       <section className="mx-auto w-full max-w-6xl px-5 pb-14 sm:px-6 lg:px-8">
         <SectionHeading
-          title={categoryArticles.length > 0 ? "Guides in this category" : "Stories coming soon"}
+          title={categoryArticles.length > 0 ? "Guides in this category" : "Related reading"}
           description={
             categoryArticles.length > 0
-              ? "These cards are structurally ready. Draft pieces stay unindexed until the body is real."
-              : "This section is built and waiting. Related reading from elsewhere on the site sits below so the page is still useful."
+              ? "Read before you buy — or after you already know what you want."
+              : "More from elsewhere on Purrstrings while this desk keeps growing."
           }
         />
         <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">

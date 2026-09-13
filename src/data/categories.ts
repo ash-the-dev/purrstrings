@@ -37,7 +37,7 @@ export const categories: Category[] = [
       "Wands, puzzles, tracks, and the occasional laser. This page is ready for roundups. Until those land, use it as a doorway into enrichment and the guides we already have.",
     image: {
       src: unsplashPhoto("1526336024174-e58f5cdd8e13", 1200),
-      alt: "A long-haired cat with a butterfly on its nose, editorial placeholder image",
+      alt: "A long-haired cat with a butterfly on its nose",
     },
     indexable: false,
     showInNav: true,
@@ -56,7 +56,7 @@ export const categories: Category[] = [
       "A future home for wands, motion toys, and anything that makes a cat sprint sideways. Layout only for now.",
     image: {
       src: unsplashPhoto("1592194996308-7b43878e84a6", 1200),
-      alt: "A fluffy cat looking toward the camera, editorial placeholder image",
+      alt: "A fluffy cat looking toward the camera",
     },
     indexable: false,
     tone: "blue",
@@ -73,7 +73,7 @@ export const categories: Category[] = [
       "A slot for the weird ones: costumes adjacent, joke gifts, and toys that exist because the internet dared someone. No filler list yet.",
     image: {
       src: unsplashPhoto("1561948955-570b270e7c36", 1200),
-      alt: "A wide-eyed white cat, editorial placeholder image",
+      alt: "A wide-eyed white cat",
     },
     indexable: false,
     tone: "pink",
@@ -90,7 +90,7 @@ export const categories: Category[] = [
       "Puzzles, foraging, window time, and the unglamorous work of keeping an indoor cat from losing their mind. Ready for guides.",
     image: {
       src: unsplashPhoto("1574158622682-e40e69881006", 1200),
-      alt: "A tabby cat against a blue sky, editorial placeholder image",
+      alt: "A tabby cat against a blue sky",
     },
     indexable: false,
     showOnHomepage: true,
@@ -108,7 +108,7 @@ export const categories: Category[] = [
       "Clay, crystal, plant-based, and the expensive boxes that promise to end scooping. We sort the useful from the overengineered.",
     image: {
       src: unsplashPhoto("1495360010541-f48722b34f7d", 1200),
-      alt: "A tabby cat sitting on white stairs, editorial placeholder image",
+      alt: "A tabby cat sitting on white stairs",
     },
     indexable: true,
     showInNav: true,
@@ -139,7 +139,7 @@ export const categories: Category[] = [
       "A dedicated door for self-cleaning boxes. There is already a related guide in the works list. This page stays unindexed until it has its own substance.",
     image: {
       src: unsplashPhoto("1511044568932-338cba0ad803", 1200),
-      alt: "An orange cat covering its face, editorial placeholder image",
+      alt: "An orange cat covering its face",
     },
     indexable: false,
     tone: "pink",
@@ -183,7 +183,7 @@ export const categories: Category[] = [
       "Capacity, cleaning, noise, filters. There is already a fountain buying-question guide. This category page waits for more.",
     image: {
       src: unsplashPhoto("1548839140-29a749e1cf4d", 1200),
-      alt: "Water poured into a glass, standing in for a fountain placeholder",
+      alt: "Water poured into a glass",
     },
     indexable: false,
     tone: "blue",
@@ -201,7 +201,7 @@ export const categories: Category[] = [
       "A future home for feeders, portioning, and the apps that come with them. No product list yet.",
     image: {
       src: unsplashPhoto("1548802673-380ab8ebc7b7", 1200),
-      alt: "An orange cat asleep in bed, editorial placeholder image",
+      alt: "An orange cat asleep in bed",
     },
     indexable: false,
     tone: "pink",
@@ -218,7 +218,7 @@ export const categories: Category[] = [
       "A narrower door into furniture, for people who came here specifically to not buy a carpeted nightmare. Related reading already exists.",
     image: {
       src: unsplashPhoto("1586023492125-27b2c045efd7", 1200),
-      alt: "A designed living room used as a furniture placeholder",
+      alt: "A designed living room",
     },
     indexable: false,
     tone: "blue",
@@ -236,7 +236,7 @@ export const categories: Category[] = [
       "Trees, shelves, beds, and condos that can live in a real apartment. Stability, materials, and whether it looks like a 2004 catalog escaped.",
     image: {
       src: unsplashPhoto("1586023492125-27b2c045efd7", 1200),
-      alt: "A calm, designed living room used as an editorial furniture placeholder",
+      alt: "A calm, designed living room",
     },
     indexable: true,
     showInNav: true,
@@ -262,7 +262,7 @@ export const categories: Category[] = [
       "What is worth the plug, and what is just another app. Feeders, cameras, GPS collars, fountains.",
     image: {
       src: unsplashPhoto("1514888286974-6c03e2ca1dba", 1200),
-      alt: "A tuxedo cat against a green backdrop, editorial placeholder image",
+      alt: "A tuxedo cat against a green backdrop",
     },
     indexable: true,
     showInNav: true,
@@ -288,7 +288,7 @@ export const categories: Category[] = [
       "Collars, batteries, and whether your cat even needs one. A related explainer already exists. This page stays thin on purpose until there is more to say.",
     image: {
       src: unsplashPhoto("1606214174585-fe31582dc6ee", 1200),
-      alt: "A white cat in profile, editorial placeholder image",
+      alt: "A white cat in profile",
     },
     indexable: false,
     tone: "blue",
@@ -306,7 +306,7 @@ export const categories: Category[] = [
       "A future gift desk: useful, funny, and not another mug if we can help it. No list yet.",
     image: {
       src: unsplashPhoto("1526336024174-e58f5cdd8e13", 1200),
-      alt: "A cat with a butterfly, editorial placeholder image",
+      alt: "A cat with a butterfly",
     },
     indexable: false,
     showOnHomepage: true,
@@ -324,7 +324,7 @@ export const categories: Category[] = [
       "A companion to cat gifts, aimed at humans who are normal about cats. Empty on purpose until there is a real guide.",
     image: {
       src: unsplashPhoto("1472491235688-bdc81a63246e", 1200),
-      alt: "A close cat portrait, editorial placeholder image",
+      alt: "A close cat portrait",
     },
     indexable: false,
     tone: "blue",
@@ -341,7 +341,7 @@ export const categories: Category[] = [
       "Carriers, nail gear, cleanup, first-week supplies. The unglamorous list. Ready for stories.",
     image: {
       src: unsplashPhoto("1548802673-380ab8ebc7b7", 1200),
-      alt: "An orange cat asleep in bed, editorial placeholder image",
+      alt: "An orange cat asleep in bed",
     },
     indexable: false,
     showOnHomepage: true,
@@ -359,7 +359,7 @@ export const categories: Category[] = [
       "Comparisons, buying questions, and the pieces we will keep adding.",
     image: {
       src: unsplashPhoto("1573865526739-10659fec78a5", 1200),
-      alt: "An orange tabby looking up, editorial placeholder image",
+      alt: "An orange tabby looking up",
     },
     indexable: true,
     showInNav: true,

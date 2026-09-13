@@ -1,39 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
+import { siteConfig } from "@/data/site";
 
 export function Hero() {
   return (
     <section>
-      <div className="mx-auto w-full max-w-6xl px-5 pt-10 pb-6 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14">
-        <p className="text-[0.7rem] font-bold uppercase tracking-[0.18em]">
-          <span className="border-b-2 border-baby-blue pb-0.5">
-            A cat magazine, basically
+      <div className="mx-auto w-full max-w-6xl px-5 pt-8 pb-5 sm:px-6 sm:pt-10 lg:px-8 lg:pt-12">
+        <p className="font-serif text-2xl leading-snug tracking-tight text-foreground sm:text-3xl">
+          Purrstrings.
+        </p>
+        <p className="mt-2 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-foreground">
+          <span className="border-b-2 border-baby-pink pb-0.5">
+            {siteConfig.tagline}
           </span>
         </p>
-        <h1 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:whitespace-nowrap lg:text-[3.35rem]">
+        <h1 className="mt-5 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:text-[3.35rem]">
           Nine lives. Zero jobs.
         </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-          We find the good stuff for cats who contribute nothing financially
-          and somehow run the entire household.
+          Real recommendations for cats who contribute nothing financially and
+          somehow run the entire household — stuff we actually use, written so
+          you can decide and buy without opening 37 tabs.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
-            href="/guides"
+            href="/best-products"
             className="inline-flex min-h-12 items-center justify-center bg-foreground px-6 text-sm font-bold tracking-wide text-background"
           >
-            See What’s Worth Buying
+            Shop the Good Stuff
           </Link>
           <Link
-            href="/best-products"
-            className="inline-flex min-h-12 items-center text-sm font-bold tracking-wide underline decoration-baby-pink decoration-2 underline-offset-4"
+            href="/guides"
+            className="inline-flex min-h-12 items-center text-sm font-bold tracking-wide underline decoration-baby-blue decoration-2 underline-offset-4"
           >
-            Browse the Chaos
+            Read the Guides
           </Link>
         </div>
       </div>
 
-      <figure className="mx-auto w-full max-w-6xl px-5 pb-12 sm:px-6 lg:px-8 lg:pb-16">
+      <figure className="mx-auto w-full max-w-6xl px-5 pb-10 sm:px-6 lg:px-8 lg:pb-14">
         <Image
           src="/images/cats/nine-lives-zero-jobs.jpg"
           alt="Cat sprawled asleep across a cat tree with its legs hanging over the sides"

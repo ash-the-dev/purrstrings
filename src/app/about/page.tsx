@@ -39,6 +39,13 @@ export default function AboutPage() {
             itself in plain language.
           </p>
           <p>
+            Every product listed here is something I have actually used and
+            enjoyed. That is the whole differentiator. If I have not lived with
+            it, it does not get a &quot;we recommend this&quot; slot — it might
+            show up as context in a guide, clearly labeled as comparison, not a
+            personal seal of approval.
+          </p>
+          <p>
             The tone is warm, a little sarcastic, and allergic to filler. We
             like expensive things when they earn it. We like cheap things when
             they work. We do not pretend a cardboard box is not sometimes the
@@ -50,17 +57,18 @@ export default function AboutPage() {
             If a product is a bad idea, we will say so — or we will not write
             the piece until we can.
           </p>
-          <p>
-            This first version is a publishing shell: categories, guides, and
-            room to grow. The opinions will get sharper. The product pages will
-            get more specific. The inbox will stay unharassed.
-          </p>
         </div>
 
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
           <Link
-            href="/guides"
+            href="/best-products"
             className="inline-flex h-12 items-center justify-center bg-foreground px-6 text-sm font-bold text-background hover:bg-chaos"
+          >
+            Shop the favorites
+          </Link>
+          <Link
+            href="/guides"
+            className="inline-flex h-12 items-center justify-center text-sm font-bold underline decoration-baby-blue decoration-2 underline-offset-4"
           >
             Read the guides
           </Link>
