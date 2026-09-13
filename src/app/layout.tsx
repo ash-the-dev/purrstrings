@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Figtree, Newsreader } from "next/font/google";
 import Script from "next/script";
+import { AffiliateAttributionCapture } from "@/components/AffiliateAttributionCapture";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { JsonLd } from "@/components/JsonLd";
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           async
         />
         <JsonLd />
+        <AffiliateAttributionCapture />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

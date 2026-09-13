@@ -105,7 +105,11 @@ export default async function PickPage({ params }: PickPageProps) {
           <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
             {pick.summary}
           </p>
-          <MerchantLinks offers={pick.merchants} />
+          <MerchantLinks
+            offers={pick.merchants}
+            productId={pick.slug}
+            productName={pick.headline}
+          />
           <p className="mt-6 text-sm text-muted">
             Want the fuller decision path?{" "}
             <Link href="/guides" className="font-semibold text-foreground underline underline-offset-4">
