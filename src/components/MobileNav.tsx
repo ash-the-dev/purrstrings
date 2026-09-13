@@ -2,11 +2,17 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { footerNav, primaryNav } from "@/data/navigation";
 import { Wordmark } from "@/components/Wordmark";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (!open) {
@@ -28,6 +34,71 @@ export function MobileNav() {
     };
   }, [open]);
 
+  const menu =
+    open && mounted
+      ? createPortal(
+          <div
+            id="mobile-navigation"
+            className="fixed inset-0 z-[100] flex flex-col bg-white"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site menu"
+          >
+            <div className="flex items-center justify-between border-b border-black/10 px-5 py-3">
+              <Wordmark />
+              <button
+                type="button"
+                className="inline-flex size-10 items-center justify-center text-foreground"
+                onClick={() => setOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <CloseIcon />
+              </button>
+            </div>
+
+            <nav
+              className="flex-1 overflow-y-auto overscroll-contain px-5 py-6"
+              aria-label="Mobile"
+            >
+              <Link
+                href="/best-products"
+                onClick={() => setOpen(false)}
+                className="mb-6 flex h-11 items-center justify-center bg-foreground text-sm font-bold tracking-wide text-background"
+              >
+                Shop all picks
+              </Link>
+              <ul className="space-y-0.5">
+                {primaryNav.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className="block py-2.5 text-lg font-medium text-foreground"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul className="mt-8 space-y-2.5 border-t border-black/10 pt-6">
+                {footerNav.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className="text-sm font-medium text-muted hover:text-foreground"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>,
+          document.body,
+        )
+      : null;
+
   return (
     <div className="lg:hidden">
       <button
@@ -40,57 +111,7 @@ export function MobileNav() {
         <span className="sr-only">Open menu</span>
         <MenuIcon />
       </button>
-
-      {open ? (
-        <div
-          id="mobile-navigation"
-          className="fixed inset-0 z-50 bg-background"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Site menu"
-        >
-          <div className="flex items-center justify-between border-b border-border px-5 py-4">
-            <Wordmark />
-            <button
-              type="button"
-              className="inline-flex size-10 items-center justify-center text-foreground"
-              onClick={() => setOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <CloseIcon />
-            </button>
-          </div>
-
-          <nav className="px-5 py-8" aria-label="Mobile">
-            <ul className="space-y-1">
-              {primaryNav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="block py-3 font-serif text-3xl text-foreground"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <ul className="mt-10 space-y-3 border-t border-border pt-8">
-              {footerNav.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={() => setOpen(false)}
-                    className="text-sm font-medium text-muted hover:text-foreground"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      ) : null}
+      {menu}
     </div>
   );
 }
