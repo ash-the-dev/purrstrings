@@ -34,13 +34,13 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  // Static PNGs browsers reliably load (App Router also emits /icon from src/app/icon.png).
+  // Public PNG icons only — avoid Next auto-generated favicon.ico (Chrome ignores/breaks it).
   icons: {
     icon: [
       { url: "/brand/favicon-32.png", type: "image/png", sizes: "32x32" },
       { url: "/brand/favicon-16.png", type: "image/png", sizes: "16x16" },
       { url: "/icon.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
     ],
     apple: [
       {

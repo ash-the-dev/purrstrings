@@ -6,14 +6,20 @@ import { primaryNav } from "@/data/navigation";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-black/10 bg-background/95 backdrop-blur-sm">
+    // Backdrop blur lives on a sibling layer — applying it on the sticky header
+    // itself makes browsers clip overflowing content (logo ears).
+    <header className="sticky top-0 z-40 overflow-visible">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 border-b border-black/10 bg-background/95 backdrop-blur-sm"
+      />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-foreground focus:px-3 focus:py-2 focus:text-sm focus:text-background"
       >
         Skip to content
       </a>
-      <div className="mx-auto flex min-h-[5rem] w-full max-w-6xl items-center justify-between gap-4 overflow-visible px-5 py-3 sm:px-6 lg:gap-6 lg:px-8">
+      <div className="relative mx-auto flex min-h-[5.5rem] w-full max-w-6xl items-center justify-between gap-4 overflow-visible px-5 py-4 sm:px-6 lg:gap-6 lg:px-8">
         <Wordmark />
         <nav className="hidden lg:block" aria-label="Primary">
           <ul className="flex items-center gap-6">
