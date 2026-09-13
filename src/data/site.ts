@@ -35,7 +35,7 @@ export const siteConfig = {
   description:
     "Cat product guides, comparisons, reviews, and recommendations for litter, food, furniture, tech, toys, and everything else your cat somehow convinced you to buy.",
   url: resolveSiteUrl(),
-  email: "hello@purrstrings.com",
+  email: "ashthedev0@gmail.com",
   locale: "en_US",
   social: {
     pinterest: "https://www.pinterest.com/purrstrings",
