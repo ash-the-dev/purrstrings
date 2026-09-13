@@ -14,21 +14,25 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#f6f1e8",
-          color: "#2a2420",
+          background: "#FFFDF8",
+          color: "#181818",
           padding: "72px",
+          border: "16px solid #181818",
         }}
       >
         <div
           style={{
-            fontSize: 28,
+            fontSize: 24,
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            color: "#c45c26",
-            fontWeight: 600,
+            background: "#BFE3F2",
+            border: "3px solid #181818",
+            padding: "8px 14px",
+            width: "auto",
+            fontWeight: 700,
           }}
         >
-          A cat product publication
+          A cat magazine, basically
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
           <div
@@ -40,7 +44,7 @@ export default function OpenGraphImage() {
           >
             Purrstrings
           </div>
-          <div style={{ fontSize: 34, color: "#6b6258", maxWidth: 760 }}>
+          <div style={{ fontSize: 34, color: "#181818", maxWidth: 820 }}>
             Good stuff for cats. No nonsense for humans.
           </div>
         </div>

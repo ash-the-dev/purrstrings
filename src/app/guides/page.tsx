@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ArticleCard } from "@/components/ArticleCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { articles } from "@/data/articles";
 
@@ -13,17 +14,16 @@ export const metadata: Metadata = {
 export default function GuidesPage() {
   return (
     <>
-      <section className="border-b border-border bg-cream">
+      <section className="bg-background">
         <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-            Guides
-          </p>
-          <h1 className="mt-3 max-w-3xl font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+          <Breadcrumbs items={[{ name: "Guides", href: "/guides" }]} />
+          <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">
             Useful cat stuff, minus the fluff
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-            Comparisons, buying questions, and the pieces we will keep adding as
-            the site grows. Dates and read times live in the article data file.
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
+            Comparisons, buying questions, and the pieces we will keep adding.
+            Drafts are visible here and stay out of the sitemap until they are
+            real.
           </p>
         </div>
       </section>

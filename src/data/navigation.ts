@@ -6,11 +6,11 @@ export type NavLink = {
 };
 
 export const primaryNav: NavLink[] = [
-  { href: "/best-products", label: "Best Products" },
-  { href: "/cat-food", label: "Cat Food" },
-  { href: "/litter", label: "Litter" },
+  { href: "/cat-toys", label: "Toys" },
+  { href: "/cat-food", label: "Food" },
+  { href: "/cat-litter", label: "Litter" },
   { href: "/cat-tech", label: "Cat Tech" },
-  { href: "/cat-furniture", label: "Cat Furniture" },
+  { href: "/cat-furniture", label: "Furniture" },
   { href: "/guides", label: "Guides" },
 ];
 

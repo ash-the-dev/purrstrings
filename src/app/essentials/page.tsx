@@ -1,20 +1,7 @@
-import type { Metadata } from "next";
-import { CategoryLanding } from "@/components/CategoryLanding";
-import { getCategoryBySlug } from "@/data/categories";
-import { notFound } from "next/navigation";
+import { CategoryPage, categoryMetadata } from "@/lib/category-page";
 
-const category = getCategoryBySlug("essentials");
+export const metadata = categoryMetadata("essentials");
 
-export const metadata: Metadata = {
-  title: category?.title ?? "Cat Parent Essentials",
-  description: category?.description,
-  alternates: { canonical: "/essentials" },
-};
-
-export default function EssentialsPage() {
-  if (!category) {
-    notFound();
-  }
-
-  return <CategoryLanding category={category} />;
+export default function Page() {
+  return <CategoryPage slug="essentials" />;
 }

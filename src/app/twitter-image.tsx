@@ -14,35 +14,17 @@ export default function TwitterImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#f6f1e8",
-          color: "#2a2420",
+          background: "#F6C5D5",
+          color: "#181818",
           padding: "72px",
+          border: "16px solid #181818",
         }}
       >
-        <div
-          style={{
-            fontSize: 28,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "#c45c26",
-            fontWeight: 600,
-          }}
-        >
-          A cat product publication
+        <div style={{ fontSize: 24, letterSpacing: "0.16em", textTransform: "uppercase", fontWeight: 700, color: "#E63946" }}>
+          Purrstrings
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div
-            style={{
-              fontSize: 88,
-              lineHeight: 0.95,
-              fontFamily: "Georgia, serif",
-            }}
-          >
-            Purrstrings
-          </div>
-          <div style={{ fontSize: 34, color: "#6b6258", maxWidth: 760 }}>
-            Good stuff for cats. No nonsense for humans.
-          </div>
+        <div style={{ fontSize: 64, lineHeight: 0.95, fontFamily: "Georgia, serif", maxWidth: 860 }}>
+          Good stuff for cats. No nonsense for humans.
         </div>
       </div>
     ),

@@ -1,29 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f1e8;
-  --foreground: #2a2420;
-  --cream: #efe8dc;
-  --tan: #e6dccb;
-  --surface: #fbf7f0;
-  --muted: #6b6258;
-  --accent: #c45c26;
-  --accent-hover: #a84c1e;
-  --border: #d9d0c1;
+  --background: #ffffff;
+  --foreground: #111111;
+  --baby-blue: #bfe3f2;
+  --baby-pink: #f6c5d5;
+  --chaos: #e63946;
+  --surface: #ffffff;
+  --muted: #5a5a5a;
+  --border: #111111;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-cream: var(--cream);
-  --color-tan: var(--tan);
+  --color-baby-blue: var(--baby-blue);
+  --color-baby-pink: var(--baby-pink);
+  --color-chaos: var(--chaos);
   --color-surface: var(--surface);
   --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
   --color-border: var(--border);
+  --color-cream: var(--background);
+  --color-tan: var(--background);
+  --color-accent: var(--chaos);
+  --color-accent-hover: #c62d3b;
   --font-sans: var(--font-figtree);
-  --font-serif: var(--font-fraunces);
+  --font-serif: var(--font-newsreader);
 }
 
 html {
@@ -36,12 +38,17 @@ body {
   font-family: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 }
 
+.font-serif {
+  font-optical-sizing: none;
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
 ::selection {
-  background: #e8c4a8;
+  background: var(--baby-pink);
   color: var(--foreground);
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--foreground);
   outline-offset: 3px;
 }

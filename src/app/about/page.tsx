@@ -59,13 +59,13 @@ export default function AboutPage() {
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
           <Link
             href="/guides"
-            className="inline-flex h-12 items-center justify-center bg-accent px-6 text-sm font-semibold text-white hover:bg-accent-hover"
+            className="inline-flex h-12 items-center justify-center bg-foreground px-6 text-sm font-bold text-background hover:bg-chaos"
           >
             Read the guides
           </Link>
           <Link
             href="/contact"
-            className="inline-flex h-12 items-center justify-center border border-foreground/15 px-6 text-sm font-semibold text-foreground hover:border-accent hover:text-accent"
+            className="inline-flex h-12 items-center justify-center text-sm font-bold underline decoration-baby-pink decoration-2 underline-offset-4"
           >
             Get in touch
           </Link>

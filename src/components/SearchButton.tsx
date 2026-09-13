@@ -34,7 +34,7 @@ export function SearchButton() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex size-10 items-center justify-center text-foreground transition-colors hover:text-accent"
+        className="inline-flex size-10 items-center justify-center text-foreground transition-colors hover:text-chaos"
         aria-label="Search"
       >
         <SearchIcon />
@@ -46,11 +46,11 @@ export function SearchButton() {
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="w-full max-w-lg border border-border bg-background p-6 shadow-xl"
+            className="w-full max-w-lg border-2 border-border bg-background p-6"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+                <p className="text-[0.7rem] font-bold uppercase tracking-[0.16em] text-chaos">
                   Search
                 </p>
                 <h2 id={titleId} className="mt-2 font-serif text-2xl text-foreground">

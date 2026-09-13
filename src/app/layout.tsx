@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree, Fraunces } from "next/font/google";
+import { Figtree, Newsreader } from "next/font/google";
 import Script from "next/script";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -13,14 +13,15 @@ const figtree = Figtree({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-newsreader",
   display: "swap",
+  style: ["normal", "italic"],
 });
 
 export const viewport: Viewport = {
-  themeColor: "#f6f1e8",
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
@@ -63,7 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${figtree.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${figtree.variable} ${newsreader.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         {/* Temporary Impact.com verification / link-transform snippet. Remove after approval if unused. */}

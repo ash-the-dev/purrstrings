@@ -1,5 +1,12 @@
 import { unsplashPhoto, type EditorialImage } from "@/lib/images";
 
+export type CategoryTone = "paper" | "pink" | "blue";
+
+export type CategoryFaq = {
+  question: string;
+  answer: string;
+};
+
 export type Category = {
   slug: string;
   href: string;
@@ -8,47 +15,242 @@ export type Category = {
   teaser: string;
   description: string;
   image: EditorialImage;
+  indexable: boolean;
+  showInNav?: boolean;
+  showOnHomepage?: boolean;
+  showInFooter?: boolean;
+  tone: CategoryTone;
+  parentSlug?: string;
+  relatedSlugs: string[];
+  articleSlugs?: string[];
+  faqs?: CategoryFaq[];
 };
 
 export const categories: Category[] = [
   {
-    slug: "litter",
-    href: "/litter",
+    slug: "cat-toys",
+    href: "/cat-toys",
+    title: "Cat Toys",
+    navLabel: "Toys",
+    teaser: "Because the cardboard box can’t win every time.",
+    description:
+      "Wands, puzzles, tracks, and the occasional laser. This page is ready for roundups. Until those land, use it as a doorway into enrichment and the guides we already have.",
+    image: {
+      src: unsplashPhoto("1526336024174-e58f5cdd8e13", 1200),
+      alt: "A long-haired cat with a butterfly on its nose, editorial placeholder image",
+    },
+    indexable: false,
+    showInNav: true,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "pink",
+    relatedSlugs: ["interactive-cat-toys", "funny-cat-toys", "cat-enrichment", "guides"],
+  },
+  {
+    slug: "interactive-cat-toys",
+    href: "/interactive-cat-toys",
+    title: "Interactive Cat Toys",
+    navLabel: "Interactive",
+    teaser: "Toys that require a human, a battery, or both.",
+    description:
+      "A future home for wands, motion toys, and anything that makes a cat sprint sideways. Layout only for now.",
+    image: {
+      src: unsplashPhoto("1592194996308-7b43878e84a6", 1200),
+      alt: "A fluffy cat looking toward the camera, editorial placeholder image",
+    },
+    indexable: false,
+    tone: "blue",
+    parentSlug: "cat-toys",
+    relatedSlugs: ["cat-toys", "funny-cat-toys", "cat-enrichment"],
+  },
+  {
+    slug: "funny-cat-toys",
+    href: "/funny-cat-toys",
+    title: "Funny Cat Toys",
+    navLabel: "Funny toys",
+    teaser: "Ridiculous on purpose. Useful if they get used.",
+    description:
+      "A slot for the weird ones: costumes adjacent, joke gifts, and toys that exist because the internet dared someone. No filler list yet.",
+    image: {
+      src: unsplashPhoto("1561948955-570b270e7c36", 1200),
+      alt: "A wide-eyed white cat, editorial placeholder image",
+    },
+    indexable: false,
+    tone: "pink",
+    parentSlug: "cat-toys",
+    relatedSlugs: ["cat-toys", "interactive-cat-toys", "cat-gifts"],
+  },
+  {
+    slug: "cat-enrichment",
+    href: "/cat-enrichment",
+    title: "Cat Enrichment",
+    navLabel: "Enrichment",
+    teaser: "More than a toy dump. Actual things to do.",
+    description:
+      "Puzzles, foraging, window time, and the unglamorous work of keeping an indoor cat from losing their mind. Ready for guides.",
+    image: {
+      src: unsplashPhoto("1574158622682-e40e69881006", 1200),
+      alt: "A tabby cat against a blue sky, editorial placeholder image",
+    },
+    indexable: false,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "blue",
+    relatedSlugs: ["cat-toys", "interactive-cat-toys", "cat-trees"],
+  },
+  {
+    slug: "cat-litter",
+    href: "/cat-litter",
     title: "Litter & Litter Boxes",
     navLabel: "Litter",
     teaser: "From $8 litter to robots that cost more than your first car.",
     description:
-      "Guides to clumping clay, crystal, plant-based, and the expensive boxes that promise to end scooping forever. We sort the useful from the overengineered.",
+      "Clay, crystal, plant-based, and the expensive boxes that promise to end scooping. We sort the useful from the overengineered.",
     image: {
       src: unsplashPhoto("1495360010541-f48722b34f7d", 1200),
       alt: "A tabby cat sitting on white stairs, editorial placeholder image",
     },
+    indexable: true,
+    showInNav: true,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "blue",
+    relatedSlugs: ["automatic-litter-boxes", "cat-tech", "guides"],
+    faqs: [
+      {
+        question: "Do you rank litter boxes with star scores?",
+        answer:
+          "No. When a guide is published, it will talk through tradeoffs in plain language. We do not invent ratings to look finished.",
+      },
+      {
+        question: "Will this cover automatic boxes and regular litter?",
+        answer:
+          "Yes. The litter desk is for both the $8 bag and the robot. Automatic boxes also have their own page when that guide is ready.",
+      },
+    ],
+  },
+  {
+    slug: "automatic-litter-boxes",
+    href: "/automatic-litter-boxes",
+    title: "Automatic Litter Boxes",
+    navLabel: "Auto boxes",
+    teaser: "Machines that scoop. Humans who still have to empty a drawer.",
+    description:
+      "A dedicated door for self-cleaning boxes. There is already a related guide in the works list. This page stays unindexed until it has its own substance.",
+    image: {
+      src: unsplashPhoto("1511044568932-338cba0ad803", 1200),
+      alt: "An orange cat covering its face, editorial placeholder image",
+    },
+    indexable: false,
+    tone: "pink",
+    parentSlug: "cat-litter",
+    relatedSlugs: ["cat-litter", "cat-tech"],
+    articleSlugs: ["best-automatic-litter-boxes"],
   },
   {
     slug: "cat-food",
     href: "/cat-food",
-    title: "Food & Treats",
-    navLabel: "Cat Food",
+    title: "Cat Food",
+    navLabel: "Food",
     teaser: "What’s actually worth putting in the bowl.",
     description:
-      "Wet, dry, fresh, freeze-dried, and the treats your cat will ignore after day three. Ingredient lists, feeding questions, and fewer marketing adjectives.",
+      "Wet, dry, fresh, and the treats your cat will ignore after day three. Ingredient lists and feeding questions, fewer marketing adjectives.",
     image: {
-      src: unsplashPhoto("1518791841217-8f162f1e1131", 1200),
-      alt: "A tabby cat lying on a sofa, editorial placeholder image",
+      src: "/images/cats/user-delectables-squeeze-up.jpg",
+      alt: "Two cats sharing a Delectables Squeeze Up tube, editorial cat food photo",
     },
+    indexable: true,
+    showInNav: true,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "pink",
+    relatedSlugs: ["automatic-cat-feeders", "cat-water-fountains", "guides"],
+    faqs: [
+      {
+        question: "Are you picking a side in wet vs dry?",
+        answer:
+          "Not as a religion. The existing guide is about moisture, budget, and picky eaters — not a morality play.",
+      },
+    ],
+  },
+  {
+    slug: "cat-water-fountains",
+    href: "/cat-water-fountains",
+    title: "Cat Water Fountains",
+    navLabel: "Fountains",
+    teaser: "Another appliance. Maybe they will drink. Maybe not.",
+    description:
+      "Capacity, cleaning, noise, filters. There is already a fountain buying-question guide. This category page waits for more.",
+    image: {
+      src: unsplashPhoto("1548839140-29a749e1cf4d", 1200),
+      alt: "Water poured into a glass, standing in for a fountain placeholder",
+    },
+    indexable: false,
+    tone: "blue",
+    parentSlug: "cat-tech",
+    relatedSlugs: ["cat-tech", "automatic-cat-feeders", "cat-food"],
+    articleSlugs: ["what-to-look-for-in-a-cat-water-fountain"],
+  },
+  {
+    slug: "automatic-cat-feeders",
+    href: "/automatic-cat-feeders",
+    title: "Automatic Cat Feeders",
+    navLabel: "Feeders",
+    teaser: "Scheduled meals. Occasional betrayal by wifi.",
+    description:
+      "A future home for feeders, portioning, and the apps that come with them. No product list yet.",
+    image: {
+      src: unsplashPhoto("1548802673-380ab8ebc7b7", 1200),
+      alt: "An orange cat asleep in bed, editorial placeholder image",
+    },
+    indexable: false,
+    tone: "pink",
+    parentSlug: "cat-tech",
+    relatedSlugs: ["cat-tech", "cat-food", "cat-water-fountains"],
+  },
+  {
+    slug: "cat-trees",
+    href: "/cat-trees",
+    title: "Cat Trees",
+    navLabel: "Cat trees",
+    teaser: "Vertical real estate that can live in a real room.",
+    description:
+      "A narrower door into furniture, for people who came here specifically to not buy a carpeted nightmare. Related reading already exists.",
+    image: {
+      src: unsplashPhoto("1586023492125-27b2c045efd7", 1200),
+      alt: "A designed living room used as a furniture placeholder",
+    },
+    indexable: false,
+    tone: "blue",
+    parentSlug: "cat-furniture",
+    relatedSlugs: ["cat-furniture", "cat-enrichment"],
+    articleSlugs: ["cat-trees-that-dont-look-like-nightmares"],
   },
   {
     slug: "cat-furniture",
     href: "/cat-furniture",
     title: "Cat Furniture",
-    navLabel: "Cat Furniture",
+    navLabel: "Furniture",
     teaser: "Cat trees that don’t destroy your living room aesthetic.",
     description:
-      "Trees, shelves, beds, and condos that can live in a real apartment. We care about stability, materials, and whether it looks like a carpeted accident.",
+      "Trees, shelves, beds, and condos that can live in a real apartment. Stability, materials, and whether it looks like a 2004 catalog escaped.",
     image: {
       src: unsplashPhoto("1586023492125-27b2c045efd7", 1200),
       alt: "A calm, designed living room used as an editorial furniture placeholder",
     },
+    indexable: true,
+    showInNav: true,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "blue",
+    relatedSlugs: ["cat-trees", "cat-enrichment", "guides"],
+    faqs: [
+      {
+        question: "Do you only recommend expensive designer trees?",
+        answer:
+          "No. Expensive is fine when it earns it. Cheap is fine when it stays upright. Ugly beige carpet towers have a high bar.",
+      },
+    ],
   },
   {
     slug: "cat-tech",
@@ -57,41 +259,118 @@ export const categories: Category[] = [
     navLabel: "Cat Tech",
     teaser: "Feeders, fountains, trackers, cameras and unnecessary-but-amazing gadgets.",
     description:
-      "Automatic feeders, cameras, GPS collars, and water fountains that cost more than they should. What is worth the plug, and what is just another app.",
+      "What is worth the plug, and what is just another app. Feeders, cameras, GPS collars, fountains.",
     image: {
       src: unsplashPhoto("1514888286974-6c03e2ca1dba", 1200),
       alt: "A tuxedo cat against a green backdrop, editorial placeholder image",
     },
+    indexable: true,
+    showInNav: true,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "pink",
+    relatedSlugs: ["cat-water-fountains", "automatic-cat-feeders", "cat-gps-trackers"],
+    faqs: [
+      {
+        question: "Is every gadget getting a review score?",
+        answer:
+          "No. If we publish a pick, it will say why. We do not invent lab results or star averages.",
+      },
+    ],
   },
   {
-    slug: "toys",
-    href: "/toys",
-    title: "Toys & Enrichment",
-    navLabel: "Toys",
-    teaser: "Because the cardboard box can’t win every time.",
+    slug: "cat-gps-trackers",
+    href: "/cat-gps-trackers",
+    title: "Cat GPS Trackers",
+    navLabel: "GPS",
+    teaser: "For the escape artist. Maybe not for the sofa professional.",
     description:
-      "Wands, puzzles, tracks, and the occasional laser that makes you question your life choices. Enrichment that is actually used, not just photographed.",
+      "Collars, batteries, and whether your cat even needs one. A related explainer already exists. This page stays thin on purpose until there is more to say.",
+    image: {
+      src: unsplashPhoto("1606214174585-fe31582dc6ee", 1200),
+      alt: "A white cat in profile, editorial placeholder image",
+    },
+    indexable: false,
+    tone: "blue",
+    parentSlug: "cat-tech",
+    relatedSlugs: ["cat-tech", "guides"],
+    articleSlugs: ["should-your-cat-wear-a-gps-tracker"],
+  },
+  {
+    slug: "cat-gifts",
+    href: "/cat-gifts",
+    title: "Cat Gifts",
+    navLabel: "Gifts",
+    teaser: "For the cat, or for the person who lives with one.",
+    description:
+      "A future gift desk: useful, funny, and not another mug if we can help it. No list yet.",
     image: {
       src: unsplashPhoto("1526336024174-e58f5cdd8e13", 1200),
-      alt: "A long-haired cat with a butterfly on its nose, editorial placeholder image",
+      alt: "A cat with a butterfly, editorial placeholder image",
     },
+    indexable: false,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "pink",
+    relatedSlugs: ["gifts-for-cat-lovers", "funny-cat-toys", "cat-toys"],
+  },
+  {
+    slug: "gifts-for-cat-lovers",
+    href: "/gifts-for-cat-lovers",
+    title: "Gifts for Cat Lovers",
+    navLabel: "For humans",
+    teaser: "Presents for people. The cat may still intercept them.",
+    description:
+      "A companion to cat gifts, aimed at humans who are normal about cats. Empty on purpose until there is a real guide.",
+    image: {
+      src: unsplashPhoto("1472491235688-bdc81a63246e", 1200),
+      alt: "A close cat portrait, editorial placeholder image",
+    },
+    indexable: false,
+    tone: "blue",
+    parentSlug: "cat-gifts",
+    relatedSlugs: ["cat-gifts", "essentials"],
   },
   {
     slug: "essentials",
     href: "/essentials",
-    title: "Cat Parent Essentials",
+    title: "Cat Parent Stuff",
     navLabel: "Essentials",
     teaser: "The stuff nobody tells you you’ll end up buying.",
     description:
-      "Carriers, nail gear, cleanup, first-week supplies, and the unglamorous items that make living with a cat less chaotic. The list you wish someone handed you.",
+      "Carriers, nail gear, cleanup, first-week supplies. The unglamorous list. Ready for stories.",
     image: {
       src: unsplashPhoto("1548802673-380ab8ebc7b7", 1200),
       alt: "An orange cat asleep in bed, editorial placeholder image",
     },
+    indexable: false,
+    showOnHomepage: true,
+    showInFooter: true,
+    tone: "blue",
+    relatedSlugs: ["cat-litter", "cat-food", "guides"],
+  },
+  {
+    slug: "guides",
+    href: "/guides",
+    title: "Guides",
+    navLabel: "Guides",
+    teaser: "Useful cat stuff, minus the fluff.",
+    description:
+      "Comparisons, buying questions, and the pieces we will keep adding.",
+    image: {
+      src: unsplashPhoto("1573865526739-10659fec78a5", 1200),
+      alt: "An orange tabby looking up, editorial placeholder image",
+    },
+    indexable: true,
+    showInNav: true,
+    showInFooter: true,
+    tone: "paper",
+    relatedSlugs: ["cat-litter", "cat-food", "cat-tech", "cat-furniture", "cat-toys"],
   },
 ];
 
-export const homepageCategories = categories;
+export const homepageCategories = categories.filter((category) => category.showOnHomepage);
+export const footerCategories = categories.filter((category) => category.showInFooter);
 
 export function getCategoryBySlug(slug: string) {
   return categories.find((category) => category.slug === slug);
@@ -99,4 +378,10 @@ export function getCategoryBySlug(slug: string) {
 
 export function getCategoryByHref(href: string) {
   return categories.find((category) => category.href === href);
+}
+
+export function getRelatedCategories(category: Category) {
+  return category.relatedSlugs
+    .map((slug) => getCategoryBySlug(slug))
+    .filter((item): item is Category => Boolean(item));
 }

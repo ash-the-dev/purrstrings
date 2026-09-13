@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { ArticleCard } from "@/components/ArticleCard";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ProductPickCard } from "@/components/ProductPickCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { articles } from "@/data/articles";
-import { featuredPicks } from "@/data/featured-picks";
+import { featuredPicks, getLivePicks } from "@/data/featured-picks";
 
 export const metadata: Metadata = {
   title: "Best Products",
@@ -17,28 +18,40 @@ export const metadata: Metadata = {
 export default function BestProductsPage() {
   return (
     <>
-      <section className="border-b border-border bg-cream">
+      <section className="bg-background">
         <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 lg:px-8 lg:py-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-            Best Products
-          </p>
-          <h1 className="mt-3 max-w-3xl font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+          <Breadcrumbs items={[{ name: "Best Products", href: "/best-products" }]} />
+          <h1 className="mt-5 max-w-3xl font-serif text-4xl leading-tight sm:text-6xl">
             Stuff we’d actually buy
           </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-            Example recommendation cards for the homepage of a publication, not
-            a store. No invented scores. No fake “we tested 47 products” claims.
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
+            Live picks first — your affiliate links, official product shots,
+            then house photos. No invented scores.
           </p>
         </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-5 sm:grid-cols-2">
-          {featuredPicks.map((pick) => (
+        <div className="grid gap-x-10 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+          {getLivePicks().map((pick) => (
             <ProductPickCard key={pick.slug} pick={pick} />
           ))}
         </div>
         <AffiliateDisclosure className="mt-8 max-w-3xl" />
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-5 pb-6 sm:px-6 lg:px-8">
+        <SectionHeading
+          title="Still cooking"
+          description="Guide shells without live merchant URLs yet."
+        />
+        <div className="mt-10 grid gap-x-10 gap-y-16 sm:grid-cols-2">
+          {featuredPicks
+            .filter((pick) => !pick.merchants.some((offer) => offer.url))
+            .map((pick) => (
+              <ProductPickCard key={pick.slug} pick={pick} />
+            ))}
+        </div>
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-6 lg:px-8 lg:pb-20">

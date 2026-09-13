@@ -12,13 +12,13 @@ export function NewsletterSignup() {
   }
 
   return (
-    <section className="border-y border-border bg-tan">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:px-8 lg:py-20">
+    <section className="border-t border-black/10 bg-background">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-5 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:px-8 lg:py-24">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-            The list
+          <p className="text-[0.7rem] font-bold uppercase tracking-[0.18em]">
+            <span className="border-b-2 border-baby-pink pb-0.5">The list</span>
           </p>
-          <h2 className="mt-3 max-w-xl font-serif text-3xl leading-tight text-balance text-foreground sm:text-4xl">
+          <h2 className="mt-4 max-w-xl font-serif text-3xl leading-tight text-balance sm:text-5xl">
             Your cat doesn’t need another newsletter. You might.
           </h2>
           <p className="mt-4 max-w-lg text-base leading-relaxed text-muted">
@@ -28,10 +28,7 @@ export function NewsletterSignup() {
         </div>
 
         {status === "submitted" ? (
-          <p
-            role="status"
-            className="border border-accent/30 bg-surface px-5 py-4 text-sm leading-relaxed text-foreground"
-          >
+          <p role="status" className="text-sm leading-relaxed">
             Coming soon. Your inbox remains safe for now.
           </p>
         ) : (
@@ -46,11 +43,11 @@ export function NewsletterSignup() {
               required
               autoComplete="email"
               placeholder="you@example.com"
-              className="h-12 flex-1 border border-border bg-surface px-4 text-base text-foreground outline-none placeholder:text-muted/80 focus-visible:border-accent focus-visible:ring-2 focus-visible:ring-accent/20"
+              className="h-12 flex-1 border-b border-foreground bg-transparent px-0 text-base outline-none"
             />
             <button
               type="submit"
-              className="h-12 shrink-0 bg-accent px-6 text-sm font-semibold tracking-wide text-white transition-colors hover:bg-accent-hover"
+              className="h-12 shrink-0 bg-foreground px-6 text-sm font-bold tracking-wide text-background"
             >
               Join the List
             </button>

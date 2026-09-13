@@ -14,7 +14,7 @@ export function ContactForm() {
     return (
       <p
         role="status"
-        className="mt-10 border border-accent/30 bg-tan px-5 py-4 text-sm leading-relaxed text-foreground"
+        className="mt-10 text-sm leading-relaxed text-foreground"
       >
         Coming soon. Your inbox remains safe for now. If it is urgent, use the
         email address on this page.
