@@ -13,7 +13,7 @@ export function Header() {
       >
         Skip to content
       </a>
-      <div className="mx-auto flex min-h-[4.75rem] w-full max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-6 lg:gap-6 lg:px-8">
+      <div className="mx-auto flex min-h-[5rem] w-full max-w-6xl items-center justify-between gap-4 overflow-visible px-5 py-3 sm:px-6 lg:gap-6 lg:px-8">
         <Wordmark />
         <nav className="hidden lg:block" aria-label="Primary">
           <ul className="flex items-center gap-6">
