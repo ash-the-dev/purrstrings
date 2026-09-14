@@ -38,20 +38,20 @@ export const metadata: Metadata = {
   // Versioned PNG icons so Chrome cannot keep a stale globe/ICO cache.
   icons: {
     icon: [
-      { url: "/brand/favicon-32-v4.png", type: "image/png", sizes: "32x32" },
-      { url: "/brand/favicon-16-v4.png", type: "image/png", sizes: "16x16" },
-      { url: "/icon-v4.png", type: "image/png", sizes: "32x32" },
-      { url: "/brand/icon-192-v4.png", type: "image/png", sizes: "192x192" },
+      { url: "/brand/favicon-32-v5.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/favicon-16-v5.png", type: "image/png", sizes: "16x16" },
+      { url: "/icon-v5.png", type: "image/png", sizes: "32x32" },
+      { url: "/brand/icon-192-v5.png", type: "image/png", sizes: "192x192" },
       { url: "/favicon.ico", sizes: "any" },
     ],
     apple: [
       {
-        url: "/brand/apple-touch-icon-v4.png",
+        url: "/brand/apple-touch-icon-v5.png",
         sizes: "180x180",
         type: "image/png",
       },
     ],
-    shortcut: "/brand/favicon-32-v4.png",
+    shortcut: "/brand/favicon-32-v5.png",
   },
   openGraph: {
     type: "website",
