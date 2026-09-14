@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 export default function AffiliateDisclosurePage() {
   return (
     <LegalPage title="Affiliate Disclosure">
+      <p className="text-foreground">
+        {siteConfig.amazonAssociatesDisclosure}
+      </p>
       <p>{siteConfig.affiliateDisclosure}</p>
       <h2>What that means</h2>
       <p>
@@ -21,7 +24,8 @@ export default function AffiliateDisclosurePage() {
         retailer or brand. You should not pay more because you used our link.
       </p>
       <p>
-        Partners may include Amazon and other pet retailers or brands over time.
+        Amazon links are affiliate links under the Amazon Associates Program.
+        Partners may also include other pet retailers or brands over time.
         Seeing a store name here does not mean every link is live with every
         partner on every page.
       </p>

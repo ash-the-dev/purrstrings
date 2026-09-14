@@ -392,7 +392,7 @@ export const guideContent: Record<string, GuideBlock[]> = {
     },
     {
       type: "p",
-      text: "Browse the Cat GPS Trackers and Cat Tech categories on Purrstrings when you are ready to compare the aisle — we will wire a specific pick when Ash is ready with an affiliate link and firsthand notes.",
+      text: "Browse Cat GPS Trackers and Cat Tech on Purrstrings when you’re comparing the aisle. We will add a specific tracker pick when there is a live product page and firsthand notes worth publishing — not before.",
     },
     {
       type: "h2",

@@ -6,6 +6,7 @@ import type { PersonalityLabel } from "@/data/personalities";
 export type MerchantOffer = {
   merchant: MerchantId;
   url?: string;
+  /** @deprecated Do not display Amazon prices unless from an approved live pricing source. */
   price?: string;
   cta?: string;
 };
@@ -48,7 +49,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4cHkJ6Y",
-        price: "$119",
         cta: "See Current Price",
       },
     ],
@@ -88,7 +88,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4Ac2uk9",
-        price: "$199.99",
         cta: "See Current Price",
       },
     ],
@@ -138,7 +137,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4r6eQWS",
-        price: "$9.98",
         cta: "See Current Price",
       },
     ],
@@ -216,7 +214,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4h1WEJv",
-        price: "$25",
         cta: "See Current Price",
       },
     ],
@@ -248,7 +245,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4h5tI36",
-        price: "$7.73",
         cta: "See Current Price",
       },
     ],
@@ -280,7 +276,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4cDOyW3",
-        price: "$15.99",
         cta: "See Current Price",
       },
     ],
@@ -312,7 +307,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/3T5rqZY",
-        price: "$28.99",
         cta: "See Current Price",
       },
     ],
@@ -344,7 +338,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4horNYL",
-        price: "$25.99",
         cta: "See Current Price",
       },
     ],
@@ -376,7 +369,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4yr2ivy",
-        price: "$23.99",
         cta: "See Current Price",
       },
     ],
@@ -408,7 +400,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4hlpcPn",
-        price: "$21.99",
         cta: "See Current Price",
       },
     ],
@@ -440,7 +431,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/46WEa8o",
-        price: "$35.98",
         cta: "See Current Price",
       },
     ],
@@ -472,7 +462,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4yUVkj1",
-        price: "$49.99",
         cta: "See Current Price",
       },
     ],
@@ -504,7 +493,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4xRbkCa",
-        price: "$39.85",
         cta: "See Current Price",
       },
     ],
@@ -536,7 +524,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/3URkT5F",
-        price: "$49.99",
         cta: "See Current Price",
       },
     ],
@@ -568,7 +555,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4A789YI",
-        price: "$49.99",
         cta: "See Current Price",
       },
     ],
@@ -600,7 +586,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4AbFLEL",
-        price: "$99.99",
         cta: "See Current Price",
       },
     ],
@@ -632,7 +617,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/46houwm",
-        price: "$199.99",
         cta: "See Current Price",
       },
     ],
@@ -664,7 +648,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4j1sjx6",
-        price: "$135.99",
         cta: "See Current Price",
       },
     ],
@@ -696,7 +679,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4cGizV8",
-        price: "$119.99",
         cta: "See Current Price",
       },
     ],
@@ -728,7 +710,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/3SZpbr8",
-        price: "$9.54",
         cta: "See Current Price",
       },
     ],
@@ -760,7 +741,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/3T5sCwq",
-        price: "$13.99",
         cta: "See Current Price",
       },
     ],
@@ -792,7 +772,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/3UMUoyh",
-        price: "$46.98",
         cta: "See Current Price",
       },
     ],
@@ -824,7 +803,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/3UGiUkH",
-        price: "$46.98",
         cta: "See Current Price",
       },
     ],
@@ -856,7 +834,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4irAz9s",
-        price: "$9.99",
         cta: "See Current Price",
       },
     ],
@@ -888,7 +865,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/46ZAq60",
-        price: "$30.72",
         cta: "See Current Price",
       },
     ],
@@ -920,7 +896,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/4h5v65O",
-        price: "$32.76",
         cta: "See Current Price",
       },
     ],
@@ -952,7 +927,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         merchant: "amazon",
         url: "https://amzn.to/3UTrkFg",
-        price: "$39.98",
         cta: "See Current Price",
       },
     ],

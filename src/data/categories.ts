@@ -34,7 +34,7 @@ export const categories: Category[] = [
     navLabel: "Toys",
     teaser: "Because the cardboard box can’t win every time.",
     description:
-      "Wands, puzzles, tracks, and the occasional laser. This page is ready for roundups. Until those land, use it as a doorway into enrichment and the guides we already have.",
+      "Wands, puzzles, tracks, lasers, and the toys that actually get used — plus a door into enrichment and the guides we already publish.",
     image: {
       src: unsplashPhoto("1526336024174-e58f5cdd8e13", 1200),
       alt: "A long-haired cat with a butterfly on its nose",
@@ -53,7 +53,7 @@ export const categories: Category[] = [
     navLabel: "Interactive",
     teaser: "Toys that require a human, a battery, or both.",
     description:
-      "A future home for wands, motion toys, and anything that makes a cat sprint sideways. Layout only for now.",
+      "Wands, motion toys, and anything that makes a cat sprint sideways — interactive picks as they earn a place on the site.",
     image: {
       src: unsplashPhoto("1592194996308-7b43878e84a6", 1200),
       alt: "A fluffy cat looking toward the camera",
@@ -70,7 +70,7 @@ export const categories: Category[] = [
     navLabel: "Funny toys",
     teaser: "Ridiculous on purpose. Useful if they get used.",
     description:
-      "A slot for the weird ones: costumes adjacent, joke gifts, and toys that exist because the internet dared someone. No filler list yet.",
+      "The weird ones: joke gifts, ridiculous toys, and products that exist because someone on the internet dared someone else.",
     image: {
       src: unsplashPhoto("1561948955-570b270e7c36", 1200),
       alt: "A wide-eyed white cat",
@@ -87,7 +87,7 @@ export const categories: Category[] = [
     navLabel: "Enrichment",
     teaser: "More than a toy dump. Actual things to do.",
     description:
-      "Puzzles, foraging, window time, and the unglamorous work of keeping an indoor cat from losing their mind. Ready for guides.",
+      "Puzzles, foraging, window time, and the unglamorous work of keeping an indoor cat from losing their mind.",
     image: {
       src: unsplashPhoto("1574158622682-e40e69881006", 1200),
       alt: "A tabby cat against a blue sky",
@@ -125,7 +125,7 @@ export const categories: Category[] = [
       {
         question: "Will this cover automatic boxes and regular litter?",
         answer:
-          "Yes. The litter desk is for both the $8 bag and the robot. Automatic boxes also have their own page when that guide is ready.",
+          "Yes. The litter desk covers everyday litter and boxes, and there’s a dedicated guide for automatic litter boxes when you want the deeper tradeoffs.",
       },
     ],
   },
@@ -136,7 +136,7 @@ export const categories: Category[] = [
     navLabel: "Auto boxes",
     teaser: "Machines that scoop. Humans who still have to empty a drawer.",
     description:
-      "A dedicated door for self-cleaning boxes. There is already a related guide in the works list. This page stays unindexed until it has its own substance.",
+      "Self-cleaning boxes that scoop while humans still empty a drawer. Pair with the automatic litter box guide for the buying questions.",
     image: {
       src: unsplashPhoto("1511044568932-338cba0ad803", 1200),
       alt: "An orange cat covering its face",
@@ -180,7 +180,7 @@ export const categories: Category[] = [
     navLabel: "Fountains",
     teaser: "Another appliance. Maybe they will drink. Maybe not.",
     description:
-      "Capacity, cleaning, noise, filters. There is already a fountain buying-question guide. This category page waits for more.",
+      "Capacity, cleaning, noise, and filters — plus a fountain buying guide for the questions that matter before you buy another appliance.",
     image: {
       src: unsplashPhoto("1548839140-29a749e1cf4d", 1200),
       alt: "Water poured into a glass",
@@ -198,7 +198,7 @@ export const categories: Category[] = [
     navLabel: "Feeders",
     teaser: "Scheduled meals. Occasional betrayal by wifi.",
     description:
-      "A future home for feeders, portioning, and the apps that come with them. No product list yet.",
+      "Scheduled meals and the apps that come with them — feeders as they earn a recommendation.",
     image: {
       src: unsplashPhoto("1548802673-380ab8ebc7b7", 1200),
       alt: "An orange cat asleep in bed",
@@ -215,7 +215,7 @@ export const categories: Category[] = [
     navLabel: "Cat trees",
     teaser: "Vertical real estate that can live in a real room.",
     description:
-      "A narrower door into furniture, for people who came here specifically to not buy a carpeted nightmare. Related reading already exists.",
+      "A narrower door into furniture for people who came here specifically to avoid a carpeted nightmare. Related reading already lives in the cat-trees guide.",
     image: {
       src: unsplashPhoto("1586023492125-27b2c045efd7", 1200),
       alt: "A designed living room",
@@ -285,7 +285,7 @@ export const categories: Category[] = [
     navLabel: "GPS",
     teaser: "For the escape artist. Maybe not for the sofa professional.",
     description:
-      "Collars, batteries, and whether your cat even needs one. A related explainer already exists. This page stays thin on purpose until there is more to say.",
+      "Collars, batteries, and whether your cat even needs one. Start with the GPS tracker explainer if you’re still deciding.",
     image: {
       src: unsplashPhoto("1606214174585-fe31582dc6ee", 1200),
       alt: "A white cat in profile",
@@ -303,7 +303,7 @@ export const categories: Category[] = [
     navLabel: "Gifts",
     teaser: "For the cat, or for the person who lives with one.",
     description:
-      "A future gift desk: useful, funny, and not another mug if we can help it. No list yet.",
+      "Useful, funny, and preferably not another mug — gifts for cats and the humans who spoil them.",
     image: {
       src: unsplashPhoto("1526336024174-e58f5cdd8e13", 1200),
       alt: "A cat with a butterfly",
@@ -321,7 +321,7 @@ export const categories: Category[] = [
     navLabel: "For humans",
     teaser: "Presents for people. The cat may still intercept them.",
     description:
-      "A companion to cat gifts, aimed at humans who are normal about cats. Empty on purpose until there is a real guide.",
+      "Presents for people who are extremely normal about cats. The cat may still intercept them.",
     image: {
       src: unsplashPhoto("1472491235688-bdc81a63246e", 1200),
       alt: "A close cat portrait",
@@ -338,7 +338,7 @@ export const categories: Category[] = [
     navLabel: "Essentials",
     teaser: "The stuff nobody tells you you’ll end up buying.",
     description:
-      "Carriers, nail gear, cleanup, first-week supplies. The unglamorous list. Ready for stories.",
+      "Carriers, nail gear, cleanup, and first-week supplies — the unglamorous list nobody warns you about.",
     image: {
       src: unsplashPhoto("1548802673-380ab8ebc7b7", 1200),
       alt: "An orange cat asleep in bed",

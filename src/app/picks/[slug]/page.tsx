@@ -66,7 +66,6 @@ export default async function PickPage({ params }: PickPageProps) {
 
   const review = getPickReview(slug);
   const gallery = pick.gallery?.length ? pick.gallery : [pick.image];
-  const price = pick.merchants.find((offer) => offer.price)?.price;
   const more = featuredPicks
     .filter((item) => item.slug !== pick.slug && item.merchants.some((o) => o.url))
     .slice(0, 2);
@@ -118,9 +117,6 @@ export default async function PickPage({ params }: PickPageProps) {
             <div className="mt-4">
               <ExperienceBadge experience={pick.experience} />
             </div>
-          ) : null}
-          {price ? (
-            <p className="mt-4 text-lg font-semibold tracking-wide">{price}</p>
           ) : null}
           <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
             {pick.summary}

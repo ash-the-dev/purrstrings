@@ -45,11 +45,6 @@ export function ProductPickCard({ pick }: ProductPickCardProps) {
         <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
           {pick.summary}
         </p>
-        {pick.merchants.find((offer) => offer.price) ? (
-          <p className="mt-3 text-sm font-semibold tracking-wide">
-            {pick.merchants.find((offer) => offer.price)?.price}
-          </p>
-        ) : null}
         <MerchantLinks
           offers={pick.merchants}
           productId={pick.slug}

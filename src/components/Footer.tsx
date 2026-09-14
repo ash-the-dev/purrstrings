@@ -70,9 +70,21 @@ export function Footer() {
       </div>
 
       <div className="border-t border-black/10">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-5 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <p>Built for people who are normal about cats. Extremely normal.</p>
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-2 px-5 py-6 text-xs text-muted sm:px-6 lg:px-8">
+          <p>{siteConfig.amazonAssociatesDisclosure}</p>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {new Date().getFullYear()} {siteConfig.name}. All rights
+              reserved.{" "}
+              <Link
+                href="/affiliate-disclosure"
+                className="underline underline-offset-2 hover:text-foreground"
+              >
+                Affiliate disclosure
+              </Link>
+            </p>
+            <p>Built for people who are normal about cats. Extremely normal.</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -43,7 +43,9 @@ export const siteConfig = {
     tiktok: "https://www.tiktok.com/@purrstrings",
   },
   affiliateDisclosure:
-    "Purrstrings may earn a commission when you buy through links on our site. It doesn’t cost you anything extra, and it never changes what we recommend.",
+    "As an Amazon Associate I earn from qualifying purchases. Other links on Purrstrings may also earn a commission. It doesn’t cost you anything extra, and it never changes what we recommend.",
+  amazonAssociatesDisclosure:
+    "As an Amazon Associate I earn from qualifying purchases.",
 } as const;
 
 export type SocialPlatform = keyof typeof siteConfig.social;
