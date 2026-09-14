@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { ExperienceBadge } from "@/components/ExperienceBadge";
 import { MerchantLinks } from "@/components/MerchantLinks";
 import { PersonalityBadge } from "@/components/PersonalityBadge";
 import { ProductGallery } from "@/components/ProductGallery";
@@ -96,9 +97,11 @@ export default async function PickPage({ params }: PickPageProps) {
           <h1 className="mt-3 font-serif text-4xl leading-tight text-balance sm:text-5xl">
             {pick.headline}
           </h1>
-          <p className="mt-3 text-sm font-medium text-foreground/80">
-            Personally used and recommended.
-          </p>
+          {pick.experience ? (
+            <div className="mt-4">
+              <ExperienceBadge experience={pick.experience} />
+            </div>
+          ) : null}
           {price ? (
             <p className="mt-4 text-lg font-semibold tracking-wide">{price}</p>
           ) : null}
@@ -119,6 +122,14 @@ export default async function PickPage({ params }: PickPageProps) {
             <Link href={pick.categoryHref} className="font-semibold text-foreground underline underline-offset-4">
               More in {pick.category}
             </Link>
+            {pick.experience ? (
+              <>
+                {" · "}
+                <Link href="/how-we-pick" className="font-semibold text-foreground underline underline-offset-4">
+                  How we pick
+                </Link>
+              </>
+            ) : null}
           </p>
           <AffiliateDisclosure className="mt-8" />
         </div>

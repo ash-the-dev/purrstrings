@@ -63,7 +63,7 @@ export function CategoryLanding({ category }: CategoryLandingProps) {
 
       {relatedPicks.length > 0 ? (
         <section className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-6 lg:px-8">
-          <SectionHeading title="Favorites in this category" description="Products we actually use — and the why behind them." />
+          <SectionHeading title="Favorites in this category" description="Picks with experience labels when we have them — and a clear path to current pricing." />
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {relatedPicks.map((pick) => (
               <ProductPickCard key={pick.slug} pick={pick} />

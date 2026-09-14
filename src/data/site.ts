@@ -33,7 +33,7 @@ export const siteConfig = {
   tagline: "They pull the strings. We buy the things.",
   title: "Purrstrings | They pull the strings. We buy the things.",
   description:
-    "They pull the strings. We buy the things. Real cat product recommendations — litter, food, furniture, tech, toys — from someone who actually uses this stuff.",
+    "They pull the strings. We buy the things. Cat product recommendations from Ash — shaped by about six years of professional pet care, 200+ clients, and the stuff that lives with Ash’s own cats.",
   url: resolveSiteUrl(),
   email: "ashthedev0@gmail.com",
   locale: "en_US",

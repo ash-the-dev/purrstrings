@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { ArticleCard } from "@/components/ArticleCard";
+import { AuthorBox } from "@/components/AuthorBox";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideBody } from "@/components/GuideBody";
 import { JsonLd } from "@/components/JsonLd";
@@ -104,7 +106,15 @@ export default async function GuidePage({ params }: GuidePageProps) {
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-foreground/80">{article.excerpt}</p>
           <p className="mt-5 text-sm text-muted">
-            {article.author ? <span>{article.author} · </span> : null}
+            {article.author ? (
+              <span>
+                By{" "}
+                <Link href="/about" className="font-semibold text-foreground underline underline-offset-4">
+                  {article.author}
+                </Link>
+                {" · "}
+              </span>
+            ) : null}
             <time dateTime={article.publishedAt}>{formatPublishDate(article.publishedAt)}</time>
             {article.updatedAt ? (
               <>
@@ -168,6 +178,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
         ) : null}
 
         <AffiliateDisclosure className="mt-10" />
+        <AuthorBox className="mt-10" />
       </div>
 
       {relatedProducts.length > 0 ? (

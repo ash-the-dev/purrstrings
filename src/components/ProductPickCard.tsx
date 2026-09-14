@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ExperienceBadge } from "@/components/ExperienceBadge";
 import { MerchantLinks } from "@/components/MerchantLinks";
 import { PersonalityBadge } from "@/components/PersonalityBadge";
 import type { FeaturedPick } from "@/data/featured-picks";
@@ -31,6 +32,11 @@ export function ProductPickCard({ pick }: ProductPickCardProps) {
             <PersonalityBadge key={label.label} label={label} />
           ))}
         </div>
+        {pick.experience ? (
+          <div className="mt-3">
+            <ExperienceBadge experience={pick.experience} />
+          </div>
+        ) : null}
         <h3 className="mt-3 font-serif text-2xl leading-snug sm:text-3xl">
           <Link href={pick.href} className="hover:text-foreground/60">
             {pick.headline}

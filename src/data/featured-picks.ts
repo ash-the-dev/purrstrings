@@ -1,5 +1,6 @@
 import { unsplashPhoto, type EditorialImage } from "@/lib/images";
 import type { MerchantId } from "@/data/merchants";
+import type { ProductExperience } from "@/data/experience";
 import type { PersonalityLabel } from "@/data/personalities";
 
 export type MerchantOffer = {
@@ -29,6 +30,8 @@ export type FeaturedPick = {
   videos?: EditorialVideo[];
   merchants: MerchantOffer[];
   personalityLabels?: PersonalityLabel[];
+  /** Confirmed experience signal — omit when unconfirmed. */
+  experience?: ProductExperience;
 };
 
 export const featuredPicks: FeaturedPick[] = [
@@ -40,6 +43,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Tall, loud, and somehow still the nicest thing in the room. Multiple perches, hammocks, sisal, and enough vertical real estate for a small gang.",
     href: "/picks/leopard-print-cat-tree",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -79,6 +83,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "A giant quiet wheel for cats who need a job. Extra-wide track, sturdy base, and the kind of cardio that happens at 3am whether you asked for it or not.",
     href: "/picks/kitty-treadmill",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -128,6 +133,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Four plush horror knives stuffed with catnip and bad intentions. Soft blades, loud personality, zero actual crime.",
     href: "/picks/murder-kitty-knife-set",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -170,6 +176,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "A rechargeable sandpiper that chirps, flaps, and refuses to fly away. Touch-activated chaos for cats who hunt with their whole personality.",
     href: "/picks/flapping-bird-toy",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -204,6 +211,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Motion-activated red-dot chaos with a random trajectory. USB rechargeable, three speeds, and zero requirement that you stand there waving a pointer like a tour guide.",
     href: "/picks/automatic-laser-cat-toy",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -235,6 +243,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "A plastic gun, thirty fuzzy balls, and the sudden realization that fetch was never optional. Quiet on the floor, loud in the personality department.",
     href: "/picks/cat-ball-launcher",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -266,6 +275,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "A rechargeable plush mouse that rolls, flips, squeaks, and refuses to stay dead. Motion sensor, wiggly mesh tail, optional catnip pouch.",
     href: "/picks/migimouse",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -297,6 +307,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Dual lasers plus a catnip UFO dangler that clips to doors, trees, and furniture. Random trajectory, motion sensor, four modes, rechargeable.",
     href: "/picks/orsda-laser-ufo",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -328,6 +339,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Hang it in a doorway and let the automatic flapper do the hunting for you. Interactive teaser energy without standing there like unpaid staff.",
     href: "/picks/doorway-flapping-teaser",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -359,6 +371,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Two-pack cardboard L pads that go vertical or horizontal, wall-mountable, with toy balls. Furniture protection that looks like it belongs there on purpose.",
     href: "/picks/l-shaped-scratcher",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -390,6 +403,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Self-adhesive carpet protectors for the couch corners your cat already claimed. Scratch here, furniture lives another day.",
     href: "/picks/scratch-carpet-mat",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -421,6 +435,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "A tall wall-mounted scratch carpet with fixed nails — climb, claw, and claim vertical real estate without sacrificing the sofa.",
     href: "/picks/wall-climbing-carpet",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -452,6 +467,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Filter-free stainless bowl, wastewater separation, 3.5L capacity. Cordless water for cats who refuse to drink from anything boring.",
     href: "/picks/wireless-cat-fountain",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -483,6 +499,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Pink running-water fountain with triple filter, quiet pump, and calm/stream/bubble drinking modes for whisker-sensitive cats.",
     href: "/picks/catit-pixi-fountain",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -514,6 +531,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Covered, high-sided, easy-clean stainless — for households tired of plastic that smells like a science experiment.",
     href: "/picks/stainless-litter-box",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -545,6 +563,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "High walls, raised step, 20L capacity, scoop included. Open-top stainless for cats who refuse to enter a cave.",
     href: "/picks/open-stainless-litter-box",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -576,6 +595,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "A rattan litter house that pretends to be furniture. Hides the box, keeps the room looking intentional, still requires scooping.",
     href: "/picks/plant-litter-enclosure",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -607,6 +627,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "A gray hidden litter enclosure with storage shelves — furniture that swallows the box and still leaves room for the backup bags.",
     href: "/picks/litter-box-cabinet",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -638,6 +659,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Hidden washroom furniture with a power outlet — built for automatic boxes that need a plug and households that want the box out of sight.",
     href: "/picks/feandrea-litter-enclosure",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -669,6 +691,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Open-top self-cleaning box with app control, safety sensors, and quiet operation — for multi-cat homes that still want to see the crime scene.",
     href: "/picks/automatic-litter-box",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -700,6 +723,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "14 lb multi-cat clumping litter with odor shield — the grocery-aisle staple when you need something that actually clumps and doesn’t pretend to be boutique.",
     href: "/picks/fresh-step-odor-shield",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -731,6 +755,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Double-layer honeycomb mat (24×18″, pink) that catches litter before it colonizes the hallway — shake it out, rinse it, keep the floors from looking like a crime scene.",
     href: "/picks/petinstinct-litter-mat",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -762,6 +787,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Grain-free adult dry food with real duck first — high protein, LifeSource Bits, and the kind of bag that disappears faster than your grocery budget planned.",
     href: "/picks/blue-wilderness-duck",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -793,6 +819,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "15 lb chicken adult formula for the delicate gut — easy-to-digest dry food when the house needs fewer digestive plot twists.",
     href: "/picks/blue-tastefuls-sensitive-stomach",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -824,6 +851,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Six-piece wet-food kit: silicone lids, can opener, steel spoon, and treat squeezer — so half-eaten cans stop living open in the fridge like a science project.",
     href: "/picks/cat-food-can-covers-set",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -855,6 +883,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "24-pack of 5.5 oz chicken pâté — natural wet food that keeps dinner interesting when dry kibble alone is a labor dispute.",
     href: "/picks/blue-tastefuls-chicken-pate",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -886,6 +915,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "40 cans of seafood & chicken pâté — the classic grocery wet food that still shows up when the fancy cans run out mid-week.",
     href: "/picks/friskies-pate-variety",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -917,6 +947,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "22 lb chicken dry food formulated for urinary tract health — the big bag for multi-cat homes that need fewer vet-office plot twists.",
     href: "/picks/iams-urinary-tract",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",
@@ -948,6 +979,7 @@ export const featuredPicks: FeaturedPick[] = [
     summary:
       "Lickable tubes that stop a household cold. Creamy puree, no fillers, and the rare treat both cats will share without a diplomatic incident.",
     href: "/picks/delectables-squeeze-up",
+    experience: { type: "personally_used" },
     merchants: [
       {
         merchant: "amazon",

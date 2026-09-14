@@ -11,9 +11,10 @@ export function Footer() {
         <div>
           <Wordmark variant="full" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-            {siteConfig.name} is an editorial guide to cat products, gear, and
-            the decisions that somehow require a spreadsheet. We recommend
-            things. We do not sell them out of a warehouse.
+            {siteConfig.name} is an editorial guide to cat products — shaped by
+            years of professional pet care and the stuff Ash actually uses with
+            cats at home. We recommend things. We do not sell them out of a
+            warehouse.
           </p>
         </div>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { AffiliateDisclosure } from "@/components/AffiliateDisclosure";
 import { ArticleCard } from "@/components/ArticleCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -9,9 +10,9 @@ import { getPublishedArticles } from "@/data/articles";
 import { getLivePicks } from "@/data/featured-picks";
 
 export const metadata: Metadata = {
-  title: "Best Products",
+  title: "Best Cat Products We Actually Stand Behind",
   description:
-    "Cat products we actually use and would buy again — litter, food, furniture, tech, toys — with clear links to current pricing.",
+    "Cat products Ash recommends from personal use and years of professional pet-care work — not a scraped Amazon list. See how we pick before you shop.",
   alternates: { canonical: "/best-products" },
 };
 
@@ -27,8 +28,19 @@ export default function BestProductsPage() {
             Stuff we’d actually buy
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            Personal favorites only — each one used, liked, and linked so you can
-            check today’s price without the scavenger hunt.
+            The full shelf of current favorites — separate from the homepage
+            highlights. Products land here through firsthand use with Ash’s
+            cats, exposure in client homes over years of pet-care work, repeat
+            observation across households, or a clear editorial case. Not every
+            pick checks every box; labels on individual pages say which kind of
+            evidence we have.{" "}
+            <Link href="/how-we-pick" className="font-semibold text-foreground underline underline-offset-4">
+              How we pick
+            </Link>
+            {" · "}
+            <Link href="/about" className="font-semibold text-foreground underline underline-offset-4">
+              About Ash
+            </Link>
           </p>
         </div>
       </section>

@@ -44,11 +44,19 @@ export default function HomePage() {
       <section className="border-y border-black/10 bg-background">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-8 sm:flex-row sm:items-end sm:justify-between sm:px-6 lg:px-8">
           <p className="max-w-2xl font-serif text-2xl leading-snug text-foreground sm:text-3xl">
-            Stuff we actually use. Stuff we&apos;d actually buy again.
+            Six years in pet care. 200+ clients. Cats at home.
           </p>
           <p className="max-w-md text-sm leading-relaxed text-muted">
-            Every product listed on Purrstrings is something I&apos;ve used and
-            liked — not a spreadsheet of affiliate leftovers.
+            Recommendations shaped by real households Ash has worked in —
+            and the stuff that lives with Ash&apos;s own cats. Not a scraped
+            product dump.{" "}
+            <Link href="/about" className="font-semibold text-foreground underline underline-offset-4">
+              About Ash
+            </Link>
+            {" · "}
+            <Link href="/how-we-pick" className="font-semibold text-foreground underline underline-offset-4">
+              How we pick
+            </Link>
           </p>
         </div>
       </section>

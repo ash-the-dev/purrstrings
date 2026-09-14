@@ -18,9 +18,10 @@ export function Hero() {
           Nine lives. Zero jobs.
         </h1>
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-          Real recommendations for cats who contribute nothing financially and
-          somehow run the entire household — stuff we actually use, written so
-          you can decide and buy without opening 37 tabs.
+          Recommendations for cats who contribute nothing financially and
+          somehow run the entire household — from someone who’s spent years
+          around pets for a living, written so you can decide and buy without
+          opening 37 tabs.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link

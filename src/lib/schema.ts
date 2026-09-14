@@ -58,13 +58,18 @@ export function articleJsonLd(article: Article, category?: Category) {
     dateModified: article.updatedAt ?? article.publishedAt,
     mainEntityOfPage: `${siteConfig.url}${getArticleHref(article)}`,
     author: {
-      "@type": "Organization",
-      name: article.author ?? siteConfig.name,
+      "@type": "Person",
+      name: article.author ?? "Ash",
+      url: `${siteConfig.url}/about`,
     },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
       url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}/brand/purrstrings-mark.png`,
+      },
     },
     articleSection: category?.title,
   };
