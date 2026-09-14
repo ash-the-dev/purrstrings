@@ -4,7 +4,7 @@ import { personalities } from "@/data/personalities";
 
 export function ChaosApproved() {
   const may = personalities.find((cat) => cat.id === "may-mayhem");
-  const mittens = personalities.find((cat) => cat.id === "murder-mittens");
+  const ace = personalities.find((cat) => cat.id === "ace-menace");
 
   if (!may) {
     return null;
@@ -42,9 +42,9 @@ export function ChaosApproved() {
           >
             See what survives →
           </Link>
-          {mittens ? (
+          {ace ? (
             <p className="mt-10 text-sm text-muted">
-              Also appearing: {mittens.name}. {mittens.headline}
+              Also appearing: {ace.name}. {ace.headline}
             </p>
           ) : null}
         </div>

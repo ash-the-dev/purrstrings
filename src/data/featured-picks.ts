@@ -147,8 +147,8 @@ export const featuredPicks: FeaturedPick[] = [
     ],
     personalityLabels: [
       {
-        personalityId: "murder-mittens",
-        label: "MURDER MITTENS APPROVED",
+        personalityId: "ace-menace",
+        label: "MENACE APPROVED",
         kind: "editorial",
       },
     ],
@@ -167,7 +167,7 @@ export const featuredPicks: FeaturedPick[] = [
       },
       {
         src: "/images/cats/user-knife-play.jpg",
-        alt: "Spotted cat biting a plush knife toy on the carpet",
+        alt: "Ace (Menace) biting a plush knife toy on the carpet",
       },
     ],
   },

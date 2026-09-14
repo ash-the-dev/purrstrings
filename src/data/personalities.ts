@@ -23,25 +23,29 @@ export const personalities: Personality[] = [
     pronouns: "she/her",
     shortName: "May",
     headline: "Professional chaos. Occasional nap.",
-    bio: "Mayhem is one of the cats who keeps the living room interesting. When her name shows up on a pick, it’s because she actually had a paw in the chaos — not because we print stickers for the aesthetic.",
+    bio: "Mayhem — May for short — is the naughty one. When her name shows up on a pick, it’s because she actually had a paw in the chaos, not because we print stickers for the aesthetic.",
     image: {
-      src: "/images/cats/user-knife-play.jpg",
-      alt: "May Mayhem biting a plush knife toy on the carpet",
+      src: "/images/cats/user-may-axe.jpg",
+      alt: "May (Mayhem) standing on her hind legs gripping a bloody plush axe toy",
     },
   },
   {
-    id: "murder-mittens",
-    name: "Mr. Murder Mittens",
+    id: "ace-menace",
+    name: "Ace Menace",
     pronouns: "he/him",
-    shortName: "Mittens",
-    headline: "Looks polite. Has opinions about ankles.",
-    bio: "Mr. Murder Mittens is the other half of the in-house chaos — soft face, sharp schedule. An approval label only earns its way onto a product when the story is real.",
+    shortName: "Ace",
+    headline: "Extra lovey. Extremely vocal.",
+    bio: "Menace — Ace for short — is the clingy talker of the house. Soft face, loud opinions. An approval label only earns its way onto a product when the story is real.",
+    image: {
+      src: "/images/cats/user-knife-play.jpg",
+      alt: "Ace (Menace) on his back biting a bloody plush knife toy on the carpet",
+    },
   },
 ];
 
 export const personalityLabelPresets = [
   "MAYHEM PICK",
-  "MURDER MITTENS APPROVED",
+  "MENACE APPROVED",
   "CHAOS APPROVED",
   "TESTED BY MAYHEM",
 ] as const;

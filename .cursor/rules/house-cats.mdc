@@ -1,0 +1,90 @@
+---
+description: Canonical names and visual IDs for Ash's house cats — never misname them
+alwaysApply: true
+---
+
+# House cats (canonical)
+
+Ash's multi-cat house has **five** cats. Use these exact names. Do not invent nicknames, swap identities, or guess who is in a photo unless the reference below confirms it.
+
+## Roster
+
+| Name | Pronouns | Personality (Ash) | Status |
+|------|----------|-------------------|--------|
+| **Menace** | he/him | Extra lovey + vociferous (vocal) | Confirmed — see Ace below |
+| **Mayhem** | she/her | Naughty | Confirmed — see below |
+| **Jynx** | he/him | Caring; emotionally attached to Ash | Confirmed — see below |
+| **Luci** | he/him | Lazy and sweet | Confirmed — see below |
+| **Mazi** | — | — | **Hold — do not add photos or invent details until Ash resumes** |
+
+**Name aliases**
+
+- **Menace** = **Ace** (short). Same cat. Prefer **Menace** in full roster copy; **Ace** is fine as the short form Ash uses.
+- **Mayhem** = **May** = product copy **May Mayhem** (`may-mayhem`). Same cat. Prefer **Mayhem** in full; **May** is fine as the short form Ash uses.
+- Spelling: **Jynx** (not Jinx). **Luci** (not Lucy / Lucia / Lucie). **Mayhem** (not Mayham). **Menace** / **Ace**.
+
+Editorial personality **Mr. Murder Mittens** is retired on-site. The knife-toy cat is **Ace / Menace** (`ace-menace`). Do not reintroduce Murder Mittens as a real or editorial sixth cat.
+
+## Ace / Menace (confirmed)
+
+- **Names:** Menace (full), Ace (short)
+- **Pronouns:** he/him
+- **Personality:** Extra lovey and vociferous — affectionate + loud/talky energy (Ash: “voicetrous”)
+- **Look:** High-contrast brown/gold tabby with bold black stripes and spots/rosettes (Bengal-leaning look); bright yellow-green eyes; often mid-play with toys
+- **Reference photos:**
+  - `.cursor/references/cats/ace.jpg` — on his back with the bloody plush chef’s knife
+  - `.cursor/references/cats/ace-2.jpg` — upright, biting/holding the bloody knife toy
+
+## May / Mayhem (confirmed)
+
+- **Names:** Mayhem (full), May (short)
+- **Pronouns:** she/her
+- **Personality:** Naughty — chaos energy; when her name is on a pick, it should match real mischief, not a sticker aesthetic
+- **Look:** Lighter / white–cream base with soft grey-tan tabby points (face, ears, legs, striped tail); **bright blue eyes** (strong visual ID vs Jynx, Luci, Ace)
+- **Reference photos:**
+  - `.cursor/references/cats/may.jpg` — adult May upright with the bloody plush axe toy (pink/blue spiked collar)
+  - `.cursor/references/cats/may-luci-kittens.jpg` — kitten pair; **May is the white/blue-eyed one on the left**
+
+## Jynx (confirmed)
+
+- **Name spelling:** Jynx (not Jinx)
+- **Pronouns:** he/him
+- **Personality:** Caring and emotionally attached — Ash: “to my hip”; cuddle / cling energy
+- **Look:** Tabby-and-white (“the white one” in Ash’s words): white chest, belly, legs, and lower face; brown/grey tabby on head, ears, back, and tail. **Not** May — May is cream/pointed with bright blue eyes; Jynx is bicolor white + tabby
+- **Reference photos:**
+  - `.cursor/references/cats/jynx.jpg` — asleep draped over a cat-tree perch in sun
+  - `.cursor/references/cats/jynx-cuddle.jpg` — on top, hugging a darker tabby on the sofa arm
+  - `.cursor/references/cats/jynx-cuddle-2.jpg` — white paw draped over companion on cherry blanket
+  - `.cursor/references/cats/jynx-kitten.jpg` — kitten with the household Doberman behind him
+
+## Luci (confirmed)
+
+- **Name spelling:** Luci
+- **Pronouns:** he/him (not she/her)
+- **Personality:** Lazy and sweet — lounge energy, not chaos
+- **Look:** Darker classic brown/black tabby; thick plume-like striped tail; eyes greenish/hazel (not May’s blue)
+- **Reference photos:**
+  - `.cursor/references/cats/luci.jpg` — adult Luci on the pink plush mini sofa
+  - `.cursor/references/cats/may-luci-kittens.jpg` — kitten pair; **Luci is the darker tabby on the right**
+
+## Mazi (on hold)
+
+Do **not** invent appearance, pronouns, personality, or photo IDs for Mazi. Leave unnamed in ambiguous photos. Resume only when Ash sends Mazi references.
+
+## Quick tell
+
+| | Ace / Menace | May / Mayhem | Jynx | Luci |
+|---|--------------|--------------|------|------|
+| Coat | Gold/tan + bold spots/stripes | White/cream + soft points | White + tabby patches (bicolor) | Darker brown tabby + plume tail |
+| Eyes | Yellow-green | Bright blue | — | Green/hazel |
+| Vibe | Lovey + vocal | Naughty | Caring / hip-velcro | Lazy and sweet |
+| Pronouns | he/him | she/her | he/him | he/him |
+
+## Rules for agents
+
+1. Prefer this roster + reference photos over chat memory.
+2. Never swap Ace/Menace, May/Mayhem, Jynx, or Luci — or their pronouns — unless Ash revises this file.
+3. Do not fill in Mazi until Ash resumes that entry.
+4. If a photo is unlabeled and does not clearly match a reference, ask Ash or leave the cat unnamed.
+5. Do not assign product “tested by” / personality labels to the wrong cat.
+6. More references land under `.cursor/references/cats/` as Ash sends them — update this rule when that happens.
