@@ -41,7 +41,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-furniture",
     headline: "Leopard-Print Cat Tree",
     summary:
-      "Tall, loud, and somehow still the nicest thing in the room. Multiple perches, hammocks, sisal, and enough vertical real estate for a small gang.",
+      "Tall, ridiculous, actually used. Vertical space, lounging, perches, and scratching in one loud piece of furniture my cats actually claim.",
     href: "/picks/leopard-print-cat-tree",
     experience: { type: "personally_used" },
     merchants: [
@@ -53,18 +53,10 @@ export const featuredPicks: FeaturedPick[] = [
       },
     ],
     image: {
-      src: "/images/products/official-cat-tree.jpg",
-      alt: "Official product photo of a tall leopard-print cat tree with multiple cats",
+      src: "/images/cats/user-cat-tree-full.jpg",
+      alt: "Two kittens resting on a leopard-print cat tree in a real home",
     },
     gallery: [
-      {
-        src: "/images/products/official-cat-tree.jpg",
-        alt: "Official product photo of a tall leopard-print cat tree with multiple cats",
-      },
-      {
-        src: "/images/products/official-cat-tree-2.jpg",
-        alt: "Official alternate product photo of the leopard-print cat tree",
-      },
       {
         src: "/images/cats/user-cat-tree-full.jpg",
         alt: "Two kittens resting on a leopard-print cat tree in a real home",
@@ -72,6 +64,14 @@ export const featuredPicks: FeaturedPick[] = [
       {
         src: "/images/cats/user-cat-tree-napping.jpg",
         alt: "Two cats napping on stacked leopard-print platforms, shot from below",
+      },
+      {
+        src: "/images/products/official-cat-tree.jpg",
+        alt: "Official product photo of a tall leopard-print cat tree with multiple cats",
+      },
+      {
+        src: "/images/products/official-cat-tree-2.jpg",
+        alt: "Official alternate product photo of the leopard-print cat tree",
       },
     ],
   },
@@ -81,7 +81,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-tech",
     headline: "Kitty Treadmill",
     summary:
-      "A giant quiet wheel for cats who need a job. Extra-wide track, sturdy base, and the kind of cardio that happens at 3am whether you asked for it or not.",
+      "A full-size cat wheel is ridiculous until you have video of your cats running on it. Mine have — enrichment for energetic indoor cats, if you have the room.",
     href: "/picks/kitty-treadmill",
     experience: { type: "personally_used" },
     merchants: [
@@ -100,10 +100,14 @@ export const featuredPicks: FeaturedPick[] = [
       },
     ],
     image: {
-      src: "/images/products/official-kitty-treadmill.jpg",
-      alt: "Official product photo of the Nordic Beast large cat exercise wheel",
+      src: "/images/cats/user-kitty-treadmill-still.jpg",
+      alt: "Two kittens running inside a cat exercise wheel at home",
     },
     gallery: [
+      {
+        src: "/images/cats/user-kitty-treadmill-still.jpg",
+        alt: "Two kittens running inside a cat exercise wheel at home",
+      },
       {
         src: "/images/products/official-kitty-treadmill.jpg",
         alt: "Official product photo of the Nordic Beast large cat exercise wheel",
@@ -112,16 +116,12 @@ export const featuredPicks: FeaturedPick[] = [
         src: "/images/products/official-kitty-treadmill-2.jpg",
         alt: "Official alternate product photo of the cat exercise wheel",
       },
-      {
-        src: "/images/cats/user-kitty-treadmill-still.jpg",
-        alt: "Two kittens running inside a cat exercise wheel at home",
-      },
     ],
     videos: [
       {
         src: "/videos/kitty-treadmill.mp4",
         poster: "/images/cats/user-kitty-treadmill-still.jpg",
-        label: "In the house",
+        label: "In the house — the video is the receipt",
       },
     ],
   },
@@ -465,7 +465,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-tech",
     headline: "Wireless Cat Fountain",
     summary:
-      "Filter-free stainless bowl, wastewater separation, 3.5L capacity. Cordless water for cats who refuse to drink from anything boring.",
+      "Cordless stainless fountain with serious capacity and a filter-free design — placement without outlet tyranny. I also run a Catit PIXI, so this isn’t one-true-fountain cosplay.",
     href: "/picks/wireless-cat-fountain",
     experience: { type: "personally_used" },
     merchants: [
@@ -497,7 +497,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-tech",
     headline: "Catit PIXI Fountain",
     summary:
-      "Pink running-water fountain with triple filter, quiet pump, and calm/stream/bubble drinking modes for whisker-sensitive cats.",
+      "The conventional filtered fountain in my setup: plug-in, replaceable filters, multiple flow modes. The useful question is PIXI vs wireless — not “is it good?”",
     href: "/picks/catit-pixi-fountain",
     experience: { type: "personally_used" },
     merchants: [
@@ -529,7 +529,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-litter",
     headline: "Stainless Steel Litter Box",
     summary:
-      "Covered, high-sided, easy-clean stainless — for households tired of plastic that smells like a science experiment.",
+      "Covered, high-sided stainless I actually use — easy to wipe down, useful for containment, and paired with an open stainless when a cat wants zero cave vibes.",
     href: "/picks/stainless-litter-box",
     experience: { type: "personally_used" },
     merchants: [
@@ -689,7 +689,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/automatic-litter-boxes",
     headline: "Automatic Litter Box",
     summary:
-      "Open-top self-cleaning box with app control, safety sensors, and quiet operation — for multi-cat homes that still want to see the crime scene.",
+      "Open-top, app-connected, quiet in real use — and still not magic. It cuts daily scooping; stainless boxes stay because automatic ≠ maintenance-free.",
     href: "/picks/automatic-litter-box",
     experience: { type: "personally_used" },
     merchants: [
@@ -721,7 +721,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-litter",
     headline: "Fresh Step Odor Shield",
     summary:
-      "14 lb multi-cat clumping litter with odor shield — the grocery-aisle staple when you need something that actually clumps and doesn’t pretend to be boutique.",
+      "Grocery-aisle multi-cat clumping clay I actually use — for clumping, scooping, and odor control, not boutique mythology.",
     href: "/picks/fresh-step-odor-shield",
     experience: { type: "personally_used" },
     merchants: [
@@ -977,7 +977,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-food",
     headline: "Delectables Squeeze Up",
     summary:
-      "Lickable tubes that stop a household cold. Creamy puree, no fillers, and the rare treat both cats will share without a diplomatic incident.",
+      "Cat bribery in a tube. My cats actually want these — we have the photo of two sharing one — and I keep buying them because a treat that works beats a complicated treat thesis.",
     href: "/picks/delectables-squeeze-up",
     experience: { type: "personally_used" },
     merchants: [
@@ -988,10 +988,14 @@ export const featuredPicks: FeaturedPick[] = [
       },
     ],
     image: {
-      src: "/images/products/official-delectables-squeeze-up.jpg",
-      alt: "Official product photo of Delectables Squeeze Up variety pack cat treats",
+      src: "/images/cats/user-delectables-squeeze-up.jpg",
+      alt: "Two cats sharing a Delectables Squeeze Up tube at home",
     },
     gallery: [
+      {
+        src: "/images/cats/user-delectables-squeeze-up.jpg",
+        alt: "Two cats sharing a Delectables Squeeze Up tube at home",
+      },
       {
         src: "/images/products/official-delectables-squeeze-up.jpg",
         alt: "Official product photo of Delectables Squeeze Up variety pack cat treats",
@@ -999,10 +1003,6 @@ export const featuredPicks: FeaturedPick[] = [
       {
         src: "/images/products/official-delectables-squeeze-up-2.jpg",
         alt: "Official alternate product photo of Delectables Squeeze Up treats",
-      },
-      {
-        src: "/images/cats/user-delectables-squeeze-up.jpg",
-        alt: "Two cats sharing a Delectables Squeeze Up tube at home",
       },
     ],
   },

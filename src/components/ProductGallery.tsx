@@ -8,9 +8,42 @@ import type { EditorialVideo } from "@/data/featured-picks";
 type ProductGalleryProps = {
   images: EditorialImage[];
   videos?: EditorialVideo[];
+  /** When true, owner/demo video appears above the still gallery. */
+  leadWithVideo?: boolean;
 };
 
-export function ProductGallery({ images, videos = [] }: ProductGalleryProps) {
+function VideoStack({ videos }: { videos: EditorialVideo[] }) {
+  if (!videos.length) return null;
+
+  return (
+    <div className="space-y-6">
+      {videos.map((video) => (
+        <figure key={video.src}>
+          {video.label ? (
+            <figcaption className="mb-2 text-[0.7rem] font-bold uppercase tracking-[0.16em]">
+              {video.label}
+            </figcaption>
+          ) : null}
+          <video
+            className="h-auto w-full bg-black"
+            controls
+            playsInline
+            preload="metadata"
+            poster={video.poster}
+          >
+            <source src={video.src} type="video/mp4" />
+          </video>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
+export function ProductGallery({
+  images,
+  videos = [],
+  leadWithVideo = false,
+}: ProductGalleryProps) {
   const [active, setActive] = useState(0);
   const current = images[active] ?? images[0];
 
@@ -18,8 +51,14 @@ export function ProductGallery({ images, videos = [] }: ProductGalleryProps) {
     return null;
   }
 
+  const videoBlock = <VideoStack videos={videos} />;
+
   return (
     <div>
+      {leadWithVideo && videos.length > 0 ? (
+        <div className="mb-8">{videoBlock}</div>
+      ) : null}
+
       <div className="relative aspect-[4/5] overflow-hidden bg-black/5 sm:aspect-[4/3]">
         <Image
           src={current.src}
@@ -57,27 +96,8 @@ export function ProductGallery({ images, videos = [] }: ProductGalleryProps) {
         </ul>
       ) : null}
 
-      {videos.length > 0 ? (
-        <div className="mt-8 space-y-6">
-          {videos.map((video) => (
-            <figure key={video.src}>
-              {video.label ? (
-                <figcaption className="mb-2 text-[0.7rem] font-bold uppercase tracking-[0.16em]">
-                  {video.label}
-                </figcaption>
-              ) : null}
-              <video
-                className="h-auto w-full bg-black"
-                controls
-                playsInline
-                preload="metadata"
-                poster={video.poster}
-              >
-                <source src={video.src} type="video/mp4" />
-              </video>
-            </figure>
-          ))}
-        </div>
+      {!leadWithVideo && videos.length > 0 ? (
+        <div className="mt-8">{videoBlock}</div>
       ) : null}
     </div>
   );
