@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { MediaPendingPanel } from "@/components/MediaPendingPanel";
 import type { EditorialImage } from "@/lib/images";
 import type { EditorialVideo } from "@/data/featured-picks";
 
@@ -10,6 +11,8 @@ type ProductGalleryProps = {
   videos?: EditorialVideo[];
   /** When true, owner/demo video appears above the still gallery. */
   leadWithVideo?: boolean;
+  /** Honest pending state — not a fake product photo. */
+  needsMedia?: boolean;
 };
 
 function VideoStack({ videos }: { videos: EditorialVideo[] }) {
@@ -43,15 +46,18 @@ export function ProductGallery({
   images,
   videos = [],
   leadWithVideo = false,
+  needsMedia = false,
 }: ProductGalleryProps) {
+  const realImages = images.filter((image) => !image.src.startsWith("/brand/"));
+  const galleryImages = needsMedia
+    ? realImages.length > 0
+      ? realImages
+      : []
+    : images;
   const [active, setActive] = useState(0);
-  const current = images[active] ?? images[0];
-
-  if (!current) {
-    return null;
-  }
-
+  const current = galleryImages[active] ?? galleryImages[0];
   const videoBlock = <VideoStack videos={videos} />;
+  const showPendingPanel = needsMedia && galleryImages.length === 0;
 
   return (
     <div>
@@ -59,20 +65,29 @@ export function ProductGallery({
         <div className="mb-8">{videoBlock}</div>
       ) : null}
 
-      <div className="relative aspect-[4/5] overflow-hidden bg-black/5 sm:aspect-[4/3]">
-        <Image
-          src={current.src}
-          alt={current.alt}
-          fill
-          priority
-          sizes="(max-width: 768px) 100vw, 640px"
-          className="object-contain bg-white"
-        />
-      </div>
+      {showPendingPanel ? (
+        <MediaPendingPanel variant="detail" />
+      ) : current ? (
+        <div className="relative aspect-[4/5] overflow-hidden bg-black/5 sm:aspect-[4/3]">
+          <Image
+            src={current.src}
+            alt={current.alt}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 640px"
+            className="object-contain bg-white"
+          />
+          {needsMedia ? (
+            <span className="absolute inset-x-0 bottom-0 bg-foreground/90 px-3 py-2.5 text-center text-[0.68rem] font-bold uppercase tracking-[0.16em] text-background">
+              More house photos coming
+            </span>
+          ) : null}
+        </div>
+      ) : null}
 
-      {images.length > 1 ? (
+      {galleryImages.length > 1 ? (
         <ul className="mt-3 flex gap-2 overflow-x-auto pb-1">
-          {images.map((image, index) => (
+          {galleryImages.map((image, index) => (
             <li key={`${image.src}-${index}`} className="shrink-0">
               <button
                 type="button"

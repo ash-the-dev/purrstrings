@@ -158,16 +158,52 @@ describe("featured Amazon URLs unchanged", () => {
     "https://amzn.to/4h5v65O",
     "https://amzn.to/3UTrkFg",
     "https://amzn.to/4cKgIPf",
+    "https://amzn.to/4rbzXak",
+    "https://amzn.to/4AhDSXp",
+    "https://amzn.to/3Ty70Jf",
+    "https://amzn.to/46m2Ozi",
+    "https://amzn.to/4dbmZUc",
+    "https://amzn.to/3VtOHW4",
+    "https://amzn.to/4xXs8Yq",
+    "https://amzn.to/3UUAVf0",
+    "https://amzn.to/4xMLWh0",
+    "https://amzn.to/4iW70wY",
+    "https://amzn.to/3UGwCEa",
+    "https://amzn.to/3T5Xlt7",
+    "https://amzn.to/4rjUPMD",
+    "https://amzn.to/4rdZNdR",
+    "https://amzn.to/46jjozN",
+    "https://amzn.to/4r87emG",
+    "https://amzn.to/4xjSHGd",
+    "https://amzn.to/4cIv6ra",
+    "https://amzn.to/4ysbqQA",
+    "https://amzn.to/4h33caN",
+    "https://amzn.to/3UGx4SS",
+    "https://amzn.to/4A6H9J3",
+    "https://amzn.to/4imRMRr",
+    "https://amzn.to/4xorPow",
+    "https://amzn.to/4h6AKEM",
+    "https://amzn.to/3T2u9Du",
+    "https://amzn.to/3VuejSL",
+    "https://amzn.to/46m380Y",
+    "https://amzn.to/3UUCcCO",
+    "https://amzn.to/4r6YugC",
+    "https://amzn.to/4xZ9z6k",
+    "https://amzn.to/4AbT7AQ",
+    "https://amzn.to/4xUNtBV",
+    "https://amzn.to/3URlDaX",
+    "https://amzn.to/46ZAq60",
+    "https://amzn.to/4cGe6Sv",
   ];
 
-  it("keeps all 29 amzn.to URLs byte-identical", () => {
+  it("keeps all 65 amzn.to URLs byte-identical", () => {
     const urls = featuredPicks.flatMap((pick) =>
       pick.merchants
         .filter((m) => m.merchant === "amazon" && m.url)
         .map((m) => m.url as string),
     );
     expect(urls).toEqual(expected);
-    expect(urls).toHaveLength(29);
+    expect(urls).toHaveLength(65);
   });
 });
 

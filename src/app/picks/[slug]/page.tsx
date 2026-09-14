@@ -83,6 +83,7 @@ export default async function PickPage({ params }: PickPageProps) {
           images={gallery}
           videos={pick.videos}
           leadWithVideo={review?.leadWithVideo}
+          needsMedia={pick.needsMedia}
         />
 
         <div>

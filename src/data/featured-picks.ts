@@ -33,6 +33,11 @@ export type FeaturedPick = {
   personalityLabels?: PersonalityLabel[];
   /** Confirmed experience signal — omit when unconfirmed. */
   experience?: ProductExperience;
+  /**
+   * True when compliant product media is not yet available.
+   * Do not point this at Amazon-scraped or unproven web images.
+   */
+  needsMedia?: boolean;
 };
 
 export const featuredPicks: FeaturedPick[] = [
@@ -979,6 +984,804 @@ export const featuredPicks: FeaturedPick[] = [
         alt: "Official alternate product photo of Delectables Squeeze Up treats",
       },
     ],
+  },
+  {
+    slug: "pink-cat-couch",
+    category: "Furniture",
+    categoryHref: "/cat-furniture",
+    headline: "Pink Cat Couch",
+    summary:
+      "A plush mini sofa for cats who think they deserve living-room furniture — washable cover, non-slip base, and enough drama for nap photos.",
+    href: "/picks/pink-cat-couch",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4rbzXak",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Pink Cat Couch — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "cat-window-perch-hammock",
+    category: "Furniture",
+    categoryHref: "/cat-furniture",
+    headline: "Cat Window Perch Hammock",
+    summary:
+      "Window real estate on suction mounts — for cats who want the view without another freestanding tower in the room.",
+    href: "/picks/cat-window-perch-hammock",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4AhDSXp",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Cat Window Perch Hammock — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "suction-window-perch",
+    category: "Furniture",
+    categoryHref: "/cat-furniture",
+    headline: "Suction Cup Window Perch",
+    summary:
+      "Foldable window perch on suction cups — bird TV when floor space is already spoken for.",
+    href: "/picks/suction-window-perch",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3Ty70Jf",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Suction Cup Window Perch — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "self-warming-cat-pad",
+    category: "Furniture",
+    categoryHref: "/cat-furniture",
+    headline: "Self-Warming Cat Pad",
+    summary:
+      "No-plug warming pad that reflects body heat — a soft rectangle for cats who colonize laundry and radiators.",
+    href: "/picks/self-warming-cat-pad",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/46m2Ozi",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Self-Warming Cat Pad — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tiki-cat-baby-favorites",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Tiki Cat Baby Favorites",
+    summary:
+      "24-can kitten wet mega pack — chicken-first recipes for the 8-weeks-and-up crowd when you want variety without a fridge full of mismatched cans.",
+    href: "/picks/tiki-cat-baby-favorites",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4dbmZUc",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tiki Cat Baby Favorites — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tiki-cat-kitten-dry",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Tiki Cat Born Carnivore Kitten",
+    summary:
+      "Non-GMO chicken kitten dry food for the crunchy half of the kitten pantry — when wet alone is not the whole plan.",
+    href: "/picks/tiki-cat-kitten-dry",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3VtOHW4",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tiki Cat Born Carnivore Kitten — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tiki-cat-broths",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Tiki Cat Broths",
+    summary:
+      "Savory broth pouches as a meal topper or sip — hydration bait for cats who treat water bowls like a suggestion.",
+    href: "/picks/tiki-cat-broths",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4xXs8Yq",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tiki Cat Broths — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tiki-cat-stix",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Tiki Cat Stix",
+    summary:
+      "50 single-serve lickable wet treats in a jar — chicken, tuna, and salmon sticks for bribery that does not require a spoon.",
+    href: "/picks/tiki-cat-stix",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3UUAVf0",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tiki Cat Stix — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tiki-cat-soft-treats",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Tiki Cat Soft Treats",
+    summary:
+      "Grain-free soft chicken treats for the pocket reward — fewer calories than a full meal negotiation, more useful than a lecture.",
+    href: "/picks/tiki-cat-soft-treats",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4xMLWh0",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tiki Cat Soft Treats — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "royal-canin-maine-coon",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Royal Canin Maine Coon Adult",
+    summary:
+      "Breed-nutrition dry food sized for big jaws — the Maine Coon bag kept in rotation for the long-haired unit in the house.",
+    href: "/picks/royal-canin-maine-coon",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4iW70wY",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Royal Canin Maine Coon Adult — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "royal-canin-urinary-wet",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Royal Canin Urinary Care Wet",
+    summary:
+      "Wet urinary-care slices for the pouch side of a urinary-focused pantry — not a substitute for vet advice, just a formula that gets bought.",
+    href: "/picks/royal-canin-urinary-wet",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3UGwCEa",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Royal Canin Urinary Care Wet — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "temptations-chicken",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Temptations Tasty Chicken",
+    summary:
+      "The classic crunchy-outside soft-inside bribe in a 16 oz tub — understated calories, overstated cat opinions.",
+    href: "/picks/temptations-chicken",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3T5Xlt7",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Temptations Tasty Chicken — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "blue-buffalo-kitten-bursts",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Blue Buffalo Kitten Bursts",
+    summary:
+      "Crunchy chicken kitten treats for training and bribery — small bag, loud results.",
+    href: "/picks/blue-buffalo-kitten-bursts",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4rjUPMD",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Blue Buffalo Kitten Bursts — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "blue-tastefuls-mini-purees",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Blue Tastefuls Mini Purées",
+    summary:
+      "24 single-serve squeeze tubes — chicken, tuna, and salmon purées when the household wants tube bribery with a Blue Buffalo label.",
+    href: "/picks/blue-tastefuls-mini-purees",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4rdZNdR",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Blue Tastefuls Mini Purées — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "friskies-party-mix-yums",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Friskies Party Mix Yums",
+    summary:
+      "Crunchy party-mix style treats — the grocery classic for cats who prefer volume over a tasting menu.",
+    href: "/picks/friskies-party-mix-yums",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/46jjozN",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Friskies Party Mix Yums — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "purina-fortiflora",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Purina Pro Plan FortiFlora",
+    summary:
+      "Probiotic packets sprinkled on food — a gut-support staple for digestive plot twists, not a miracle cure.",
+    href: "/picks/purina-fortiflora",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4r87emG",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Purina Pro Plan FortiFlora — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "iams-urinary-hairball",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "IAMS Urinary + Hairball",
+    summary:
+      "22 lb dry food with urinary-tract and hairball formulas on one bag — distinct from the other IAMS urinary bag already on the site.",
+    href: "/picks/iams-urinary-hairball",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4xjSHGd",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for IAMS Urinary + Hairball — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "airtag-cat-collar",
+    category: "Cat Tech",
+    categoryHref: "/cat-tech",
+    headline: "AirTag Cat Collar",
+    summary:
+      "Breakaway reflective collar with a built-in AirTag holder — Find My for the escape artist, assuming they tolerate jewelry with a purpose.",
+    href: "/picks/airtag-cat-collar",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4cIv6ra",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for AirTag Cat Collar — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "ring-pet-tag",
+    category: "Cat Tech",
+    categoryHref: "/cat-tech",
+    headline: "Ring Pet Tag",
+    summary:
+      "QR collar tag with scan alerts and a shareable pet profile — not GPS, just a smarter lost-cat sticker that talks to the Ring app.",
+    href: "/picks/ring-pet-tag",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4ysbqQA",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Ring Pet Tag — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "ring-indoor-cam",
+    category: "Cat Tech",
+    categoryHref: "/cat-tech",
+    headline: "Ring Indoor Cam",
+    summary:
+      "Indoor security cam for checking on cats (and everything else) — plug-in peace of mind when you are not home to referee the chaos.",
+    href: "/picks/ring-indoor-cam",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4h33caN",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Ring Indoor Cam — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "furbo-360-cat-camera",
+    category: "Cat Tech",
+    categoryHref: "/cat-tech",
+    headline: "Furbo 360° Cat Camera",
+    summary:
+      "Wide-angle cat camera with treat toss and a feather toy on top — remote bribery for when you need video proof of who started it.",
+    href: "/picks/furbo-360-cat-camera",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3UGx4SS",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Furbo 360° Cat Camera — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "pumpkii-pet-camera",
+    category: "Cat Tech",
+    categoryHref: "/cat-tech",
+    headline: "Pumpkii Pet Camera",
+    summary:
+      "Rolling camera robot with treat toss and laser play — a separate gadget from Furbo for multi-room coverage and floor-level chaos.",
+    href: "/picks/pumpkii-pet-camera",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4A6H9J3",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Pumpkii Pet Camera — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "petlibro-granary-feeder",
+    category: "Cat Tech",
+    categoryHref: "/cat-tech",
+    headline: "PETLIBRO Granary Feeder",
+    summary:
+      "Wi-Fi automatic feeder with scheduled portions and a meal-call recording — for households that need breakfast to happen whether anyone is awake.",
+    href: "/picks/petlibro-granary-feeder",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4imRMRr",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for PETLIBRO Granary Feeder — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "gps-tracker-collar",
+    category: "Cat Tech",
+    categoryHref: "/cat-tech",
+    headline: "GPS Tracker Collar",
+    summary:
+      "Real-time tracking collar gear for the outdoor-curious — batteries, subscriptions, and whether your cat even needs one still apply.",
+    href: "/picks/gps-tracker-collar",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4xorPow",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for GPS Tracker Collar — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tidy-cats-tidy-feet",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "Tidy Cats Tidy Feet",
+    summary:
+      "Performance+ low-tracking multi-cat clumping litter — for boxes that already have enough drama without paw prints everywhere.",
+    href: "/picks/tidy-cats-tidy-feet",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4h6AKEM",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tidy Cats Tidy Feet — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tidy-cats-lightweight",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "Tidy Cats Lightweight",
+    summary:
+      "Unscented multi-cat lightweight litter — easier to haul upstairs than the dense clay bags that train your biceps instead.",
+    href: "/picks/tidy-cats-lightweight",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3T2u9Du",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tidy Cats Lightweight — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "tidy-cats-247-performance",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "Tidy Cats 24/7 Performance",
+    summary:
+      "Everyday clumping litter for boxes that never get a day off — the grocery-aisle workhorse version.",
+    href: "/picks/tidy-cats-247-performance",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3VuejSL",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Tidy Cats 24/7 Performance — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "fresh-step-deodorizing-crystals",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "Fresh Step Deodorizing Crystals",
+    summary:
+      "Litter-box deodorizing crystals sprinkled into the box — odor insurance, not a full litter replacement.",
+    href: "/picks/fresh-step-deodorizing-crystals",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/46m380Y",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Fresh Step Deodorizing Crystals — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "dr-elseys-clean-tracks",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "Dr. Elsey's Clean Tracks",
+    summary:
+      "Unscented hard-clumping litter built around low tracking — multi-cat strength without the perfume aisle experience.",
+    href: "/picks/dr-elseys-clean-tracks",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3UUCcCO",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Dr. Elsey's Clean Tracks — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "cat-tunnel-toy-set",
+    category: "Cat Toys",
+    categoryHref: "/cat-toys",
+    headline: "Cat Tunnel and Toy Set",
+    summary:
+      "Collapsible three-way tunnel plus a pile of mice, balls, and springs — enrichment that takes over the hallway for an afternoon.",
+    href: "/picks/cat-tunnel-toy-set",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4r6YugC",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/images/cats/user-scratch-tunnel.jpg",
+      alt: "Owner photo of a cat using a tunnel toy at home",
+    },
+    gallery: [
+      {
+        src: "/images/cats/user-scratch-tunnel.jpg",
+        alt: "Owner photo of a cat using a tunnel toy at home",
+      },
+    ],
+  },
+  {
+    slug: "sensitive-cat-litter",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "PetSafe ScoopFree Fragrance-Free Crystal Litter",
+    summary:
+      "Fragrance-free crystal litter for ScoopFree trays — the Sensitive Litter variant when perfume in the box is the problem, not the cat.",
+    href: "/picks/sensitive-cat-litter",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4xZ9z6k",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for PetSafe ScoopFree Fragrance-Free Crystal Litter — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "litter-robot-4",
+    category: "Litter",
+    categoryHref: "/automatic-litter-boxes",
+    headline: "Litter-Robot 4",
+    summary:
+      "Whisker self-cleaning litter box — a different machine from the open-top automatic already on the site, with the app, globe, and price tag that come with it.",
+    href: "/picks/litter-robot-4",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4AbT7AQ",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Litter-Robot 4 — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "cat-litter-scoop",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "Cat Litter Scoop with Holder",
+    summary:
+      "Stainless scoop with a holder so the scoop stops living on top of the bag like a crime scene prop.",
+    href: "/picks/cat-litter-scoop",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4xUNtBV",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Cat Litter Scoop with Holder — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "affordable-cat-scoop",
+    category: "Litter",
+    categoryHref: "/cat-litter",
+    headline: "Affordable Cat Litter Scoop",
+    summary:
+      "A durable basic scooper — the backup or budget option when you do not need the fancy holder set.",
+    href: "/picks/affordable-cat-scoop",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/3URlDaX",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Affordable Cat Litter Scoop — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "blue-tastefuls-chicken-flaked",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Blue Tastefuls Chicken Flaked",
+    summary:
+      "Flaked chicken wet food — same Amazon destination as the pâté listing when the cut changes but the cart link does not.",
+    href: "/picks/blue-tastefuls-chicken-flaked",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/46ZAq60",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Blue Tastefuls Chicken Flaked — owner or authorized product photo needed",
+    },
+  },
+  {
+    slug: "friskies-chunky-variety",
+    category: "Cat Food",
+    categoryHref: "/cat-food",
+    headline: "Friskies Extra Chunky Variety",
+    summary:
+      "24-can chunky wet variety — the textured grocery classic when pâté alone is a labor dispute.",
+    href: "/picks/friskies-chunky-variety",
+    experience: { type: "personally_used" },
+    needsMedia: true,
+    merchants: [
+      {
+        merchant: "amazon",
+        url: "https://amzn.to/4cGe6Sv",
+        cta: "See Current Price",
+      },
+    ],
+    image: {
+      src: "/brand/og-default.png",
+      alt: "Media pending for Friskies Extra Chunky Variety — owner or authorized product photo needed",
+    },
   },
   {
     slug: "best-automatic-litter-box",

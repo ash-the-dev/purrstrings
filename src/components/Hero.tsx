@@ -9,32 +9,29 @@ export function Hero() {
         <p className="font-serif text-2xl leading-snug tracking-tight text-foreground sm:text-3xl">
           Purrstrings.
         </p>
-        <p className="mt-2 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-foreground">
-          <span className="border-b-2 border-baby-pink pb-0.5">
-            {siteConfig.tagline}
-          </span>
-        </p>
-        <h1 className="mt-5 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:text-[3.35rem]">
-          Nine lives. Zero jobs.
+        <h1 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:text-[3.35rem]">
+          {siteConfig.tagline}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
-          Recommendations for cats who contribute nothing financially and
-          somehow run the entire household — from someone who’s spent years
-          around pets for a living, written so you can decide and buy without
-          opening 37 tabs.
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">
+          Cat products we&apos;ve actually used — food, litter, toys, furniture,
+          tech, and the weird stuff in between. Firsthand picks from a real
+          multi-cat house.
         </p>
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <p className="mt-5 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-foreground/75">
+          Personally used. Independently picked. Affiliate-supported.
+        </p>
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
           <Link
             href="/best-products"
             className="inline-flex min-h-12 items-center justify-center bg-foreground px-6 text-sm font-bold tracking-wide text-background"
           >
-            Shop the Good Stuff
+            See What We Actually Use
           </Link>
           <Link
-            href="/guides"
+            href="/how-we-pick"
             className="inline-flex min-h-12 items-center text-sm font-bold tracking-wide underline decoration-baby-blue decoration-2 underline-offset-4"
           >
-            Read the Guides
+            How We Pick
           </Link>
         </div>
       </div>
@@ -50,6 +47,9 @@ export function Hero() {
           sizes="(max-width: 1024px) 100vw, 1152px"
           className="h-auto w-full"
         />
+        <figcaption className="mt-3 font-serif text-lg italic text-muted sm:text-xl">
+          Nine lives. Zero jobs.
+        </figcaption>
       </figure>
     </section>
   );

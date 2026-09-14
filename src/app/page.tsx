@@ -12,6 +12,7 @@ import { getFeaturedArticles, getPublishedArticles } from "@/data/articles";
 import { homepageCategories } from "@/data/categories";
 import { getLivePicks } from "@/data/featured-picks";
 import { siteConfig } from "@/data/site";
+import { sortPicksForCatalog } from "@/data/shop-groups";
 
 export const metadata: Metadata = {
   title: { absolute: siteConfig.title },
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const livePicks = getLivePicks();
-  const homepagePicks = livePicks.slice(0, 6);
+  const homepagePicks = sortPicksForCatalog(livePicks).slice(0, 6);
   const featuredGuides = getFeaturedArticles()
     .filter((article) => !article.draft)
     .slice(0, 4);
@@ -47,9 +48,9 @@ export default function HomePage() {
             Six years in pet care. 200+ clients. Cats at home.
           </p>
           <p className="max-w-md text-sm leading-relaxed text-muted">
-            Recommendations shaped by real households Ash has worked in —
-            and the stuff that lives with Ash&apos;s own cats. Not a scraped
-            product dump.{" "}
+            Supporting context — not the whole pitch. Recommendations shaped by
+            real households Ash has worked in, and the stuff that lives with
+            Ash&apos;s own cats.{" "}
             <Link href="/about" className="font-semibold text-foreground underline underline-offset-4">
               About Ash
             </Link>
@@ -64,8 +65,8 @@ export default function HomePage() {
       <section className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
         <SectionHeading
           eyebrow="What we actually use"
-          title="Shop the favorites"
-          description="Clear picks with why they made the cut — house photos and video when we have them, official product shots when we don’t — and a straight path to current pricing."
+          title="Start with the shelf"
+          description="A handful of current favorites. The full catalog — food, litter, toys, furniture, tech — lives in the Store."
         />
         <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {homepagePicks.map((pick) => (
@@ -78,7 +79,7 @@ export default function HomePage() {
             href="/best-products"
             className="inline-flex min-h-11 shrink-0 items-center text-sm font-bold underline decoration-baby-pink decoration-2 underline-offset-4"
           >
-            See all favorites →
+            See what we actually use →
           </Link>
         </div>
       </section>
