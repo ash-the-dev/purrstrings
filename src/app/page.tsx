@@ -65,7 +65,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="What we actually use"
           title="Shop the favorites"
-          description="Clear picks with why they made the cut — and a straight path to current pricing."
+          description="Clear picks with why they made the cut — house photos and video when we have them, official product shots when we don’t — and a straight path to current pricing."
         />
         <div className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {homepagePicks.map((pick) => (

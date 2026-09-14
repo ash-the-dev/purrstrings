@@ -13,8 +13,8 @@ export function TreatsSpotlight() {
             Shared custody of a squeeze tube.
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
-            Delectables Squeeze Up — the rare snack that gets two cats on the
-            same diplomatic mission.
+            Delectables Squeeze Up — the rare snack that gets two of my cats on
+            the same diplomatic mission.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link

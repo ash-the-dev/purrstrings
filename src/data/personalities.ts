@@ -23,7 +23,7 @@ export const personalities: Personality[] = [
     pronouns: "she/her",
     shortName: "May",
     headline: "Professional chaos. Occasional nap.",
-    bio: "May Mayhem is a recurring Purrstrings personality. Her name may show up on future picks and stories. We will not stamp TESTED BY MAYHEM on a product unless we actually show that.",
+    bio: "Mayhem is one of the cats who keeps the living room interesting. When her name shows up on a pick, it’s because she actually had a paw in the chaos — not because we print stickers for the aesthetic.",
     image: {
       src: "/images/cats/user-knife-play.jpg",
       alt: "May Mayhem biting a plush knife toy on the carpet",
@@ -35,7 +35,7 @@ export const personalities: Personality[] = [
     pronouns: "he/him",
     shortName: "Mittens",
     headline: "Looks polite. Has opinions about ankles.",
-    bio: "Mr. Murder Mittens is the other half of the in-house chaos. MURDER MITTENS APPROVED is a label we can attach later. It is not a fake review factory.",
+    bio: "Mr. Murder Mittens is the other half of the in-house chaos — soft face, sharp schedule. An approval label only earns its way onto a product when the story is real.",
   },
 ];
 

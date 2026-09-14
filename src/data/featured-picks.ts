@@ -23,9 +23,9 @@ export type FeaturedPick = {
   headline: string;
   summary: string;
   href: string;
-  /** Card / OG primary. Prefer first gallery image (official product shot). */
+  /** Card / OG primary. Prefer first gallery image (owner media when available). */
   image: EditorialImage;
-  /** Gallery order: official Amazon product images first, owner photos last. */
+  /** Gallery order: owner photos first when we have them; official product shots supplement. */
   gallery?: EditorialImage[];
   videos?: EditorialVideo[];
   merchants: MerchantOffer[];
@@ -945,7 +945,7 @@ export const featuredPicks: FeaturedPick[] = [
     categoryHref: "/cat-food",
     headline: "IAMS Urinary Tract Health",
     summary:
-      "22 lb chicken dry food formulated for urinary tract health — the big bag for multi-cat homes that need fewer vet-office plot twists.",
+      "22 lb chicken dry food with a urinary-tract formula — a big-bag staple I buy for the multi-cat pantry when that style of food fits the household.",
     href: "/picks/iams-urinary-tract",
     experience: { type: "personally_used" },
     merchants: [

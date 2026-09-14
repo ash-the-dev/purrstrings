@@ -32,8 +32,9 @@ export function ChaosApproved() {
             May Mayhem vs. Whatever This Thing Is.
           </h2>
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted">
-            The cats who stress-test the living room — and the products that
-            survive them. Personality first. Purchase second.
+            Meet the cats who keep the living room interesting — and the
+            products that still earn a place next to them. Personality first.
+            Purchase second.
           </p>
           <Link
             href="/best-products"

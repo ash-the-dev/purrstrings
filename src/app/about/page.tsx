@@ -41,11 +41,19 @@ export default function AboutPage() {
             sink. That experience is useful. It is not a medical degree.
           </p>
           <p>
-            I also have cats. Plenty of the products on Purrstrings live in my
-            house. Others I know because I’ve seen them repeatedly across client
-            households. Some things show up in guides as comparison or research
-            context — and when that’s the case, we say so instead of pretending I
-            personally own every SKU on the internet.
+            I also have cats — five of them: Menace, Mayhem, Jynx, Luci, and
+            Mazi. One Maine Coon mix, two domestic cats, and two Bengal/Savannah
+            F5 mixes. That household is context for how I live with products, not
+            a breed recommendation engine.
+          </p>
+          <p>
+            Right now, every product in our live picks is something I’ve
+            personally bought and used with my own cats. That is today’s catalog
+            truth — not a forever promise that every future page can only work
+            that way. Plenty of what I know still comes from client homes over
+            years of pet-care work, and some guide material is comparison or
+            research context. When that’s the case, we say so instead of
+            pretending I personally own every SKU on the internet.
           </p>
           <p>
             Purrstrings exists because buying something for a cat shouldn’t

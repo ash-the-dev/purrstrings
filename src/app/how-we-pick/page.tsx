@@ -28,9 +28,19 @@ export default function HowWePickPage() {
           <p>
             Purrstrings is an editorial recommendation site run by Ash — someone
             who’s spent about six years in professional pet care (200+ clients)
-            and also lives with cats. Products show up here because they earned
-            a place through real use, repeated household exposure, or a clear
-            editorial case — not because a spreadsheet said “high conversion.”
+            and also lives with five cats (Menace, Mayhem, Jynx, Luci, and Mazi).
+            Products show up here because they earned a place through real use,
+            repeated household exposure, or a clear editorial case — not because
+            a spreadsheet said “high conversion.”
+          </p>
+          <p>
+            Today’s live catalog is simpler than the full taxonomy below: every
+            product currently featured in our live picks is something Ash has
+            personally bought and used with their own cats. The other evidence
+            labels still matter for future coverage — client-home patterns,
+            long-term favorites, and clearly marked research/editorial picks —
+            so we keep them honest instead of pretending personal ownership is
+            the only kind of useful knowledge.
           </p>
 
           <h2 className="pt-4 font-serif text-3xl text-foreground">
