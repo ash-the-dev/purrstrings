@@ -135,7 +135,7 @@ describe("featured Amazon URLs unchanged", () => {
     "https://amzn.to/4A9Vxjp",
     "https://amzn.to/4h1WEJv",
     "https://amzn.to/4h5tI36",
-    "https://amzn.to/4cDOyW3",
+    "https://amzn.to/4isFsiy",
     "https://amzn.to/3T5rqZY",
     "https://amzn.to/4horNYL",
     "https://amzn.to/4yr2ivy",

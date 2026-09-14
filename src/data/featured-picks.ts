@@ -275,7 +275,7 @@ export const featuredPicks: FeaturedPick[] = [
     merchants: [
       {
         merchant: "amazon",
-        url: "https://amzn.to/4cDOyW3",
+        url: "https://amzn.to/4isFsiy",
         cta: "See Current Price",
       },
     ],
