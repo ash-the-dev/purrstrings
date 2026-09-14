@@ -82,8 +82,8 @@ export const featuredPicks: FeaturedPick[] = [
   },
   {
     slug: "kitty-treadmill",
-    category: "Cat Tech",
-    categoryHref: "/cat-tech",
+    category: "Cat Toys",
+    categoryHref: "/cat-toys",
     headline: "Kitty Treadmill",
     summary:
       "A full-size cat wheel is ridiculous until you have video of your cats running on it. Mine have — enrichment for energetic indoor cats, if you have the room.",

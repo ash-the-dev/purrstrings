@@ -25,15 +25,25 @@ export const shopGroups: ShopGroup[] = [
   { id: "cat-tech", label: "Cat Tech" },
 ];
 
+/** Shop by use: fountains + automatic feeders, even if internal href is /cat-tech. */
 const FOUNTAINS_FEEDING_SLUGS = new Set([
   "wireless-cat-fountain",
   "catit-pixi-fountain",
   "petlibro-granary-feeder",
 ]);
 
+/**
+ * Enrichment gear that must not land in Cat Tech just because it is mechanical.
+ * Cat wheel / treadmill is exercise play, not cameras/trackers.
+ */
+const TOYS_ENRICHMENT_SLUGS = new Set(["kitty-treadmill"]);
+
 export function shopGroupIdForPick(pick: FeaturedPick): Exclude<ShopGroupId, "all"> {
   if (FOUNTAINS_FEEDING_SLUGS.has(pick.slug)) {
     return "fountains-feeding";
+  }
+  if (TOYS_ENRICHMENT_SLUGS.has(pick.slug)) {
+    return "toys";
   }
 
   switch (pick.categoryHref) {
